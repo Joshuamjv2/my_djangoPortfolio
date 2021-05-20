@@ -39,17 +39,30 @@
                 Lorem ipsum dolor sit amet, consectetur adipisicing elit. Non pariatur perspiciatis velit quibusdam odit officia, animi cum cumque eaque quam magni deleniti est minus dolor architecto ex esse, expedita fugit.
             </div>
             <div class="all-work">
-                <div class="single-work">
-                    <div class="work-image"></div>
-                    <div class="work-info">
-                        <div class="work-text">
-                            <h3 class="work-title"></h3>
-                            <p class="work-detail"></p>
+                {% for project in projects %}
+                    <div class="single-work">
+                        <div class="work-image">
+                            <img src="{% static 'images/phone.jpg'%}" alt="">
                         </div>
-                        <div class="work-cta cta"></div>
+                        <!-- <div class="work-info"> -->
+                            <div class="work-text">
+                                <h3 class="work-title">{{project.title}}</h3>
+                                <p class="work-detail">
+                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt soluta exercitationem velit quod, atque nemo corrupti facere quis repudiandae rem rerum ipsam eum.
+                                </p>
+                            
+                            <ul class="work-cta">
+                                <li class="cta github">
+                                    <span><i class="fa fa-github" aria-hidden="true">
+                                    </i></span>github</li>
+                                <li class="cta live-site"><span><i class="fa fa-eye" aria-hidden="true"></i></span>live</li>
+                            </ul>
+                        </div>
+                        <!-- </div> -->
                     </div>
-                </div>
+                {% endfor %}
             </div>
+            <p class="cta see-all">See all my work</p>
         </div>
     </section>
 {% endblock content %}

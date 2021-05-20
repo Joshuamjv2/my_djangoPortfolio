@@ -18,7 +18,7 @@
 html, body{
     /* font-family: var(--main-font); */
     font-family: 'Poppins';
-    background-color: var(--chalk-white);
+    /* background-color: var(--chalk-white); */
 }
 
 
@@ -37,6 +37,7 @@ header{
 
 img{
     max-width: 100%;
+    display: block;
 }
 
 li{
@@ -117,6 +118,9 @@ section{
 .cta{
     color: red;
     font-size: 1.2rem;
+}
+
+.hero .cta{
     margin-top: 2rem;
 }
 
@@ -131,7 +135,7 @@ section{
 
 /* start about */
 .about{
-    /* background-color: #F4F2EC; */
+    background-color: rgb(233, 233, 233);
     color: #010318;
 }
 
@@ -155,25 +159,33 @@ section{
 .work{
     background-color:#e5e6e5;
     color: #010318;
-    height: 500px;
 }
 
+.all-work{
+    margin-top: 2rem;
+}
 
+.single-work{
+    background-color: #d6d8d6;
+}
 
-.single-work-wrapper{
-    background-color: #d8e4dd;
-    /* padding: 2rem; */
+.see-all{
+    margin-top: -.5rem;
+    font-size: 1.5rem;
 }
 
 
 .single-work{
     margin-bottom: 2rem;
     padding-bottom: 1rem;
-    /* border-bottom: 2px var(--black-color) solid; */
 }
 
 .work-title{
     margin-bottom: .5rem;
+}
+
+.work-detail{
+    display: none;
 }
 
 .work-cta{
@@ -188,7 +200,7 @@ section{
     margin-top: .5rem;
 }
 
-.project-view{
+/* .project-view{
     color: var(--black-color);
 }
 
@@ -200,7 +212,7 @@ section{
 .project-view .fa-eye{
     margin-left:.8rem;
     margin-right: .35rem;
-}
+} */
 
 
 /* Contact */
@@ -375,7 +387,7 @@ footer{
     .about-content{
         display: flex;
         justify-content: space-between;
-        background-color: #ebeeec;
+        /* background-color: #ebeeec; */
         /* padding: 2rem; */
     }
 
@@ -411,6 +423,13 @@ footer{
         display: flex;
         padding: 2rem;
         border-bottom: none;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .work-text{
+        padding-left: 2rem;
+        width: 100%;
     }
 
     .single-work-item + .single-work-item{
@@ -424,9 +443,14 @@ footer{
     .work-title{
         font-size: 1.4rem;
     }
-    .work-and-cta{
-        font-size: .9rem;
+
+    .work-detail{
+        display: unset;
+        font-size: .8rem;
     }
+    /* .work-and-cta{
+        font-size: .9rem;
+    } */
 
 
     /* Contact */
@@ -497,7 +521,7 @@ footer{
     .about-content{
         display: flex;
         justify-content: space-between;
-        background-color: #ebeeec;
+        /* background-color: #ebeeec; */
         /* padding: 3rem; */
     }
 
