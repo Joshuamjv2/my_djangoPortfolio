@@ -1,0 +1,55 @@
+{% extends 'base.html' %}
+{% load static %}
+
+
+{% block content %}
+    <section class="main">
+        <div class="container hero">
+            <!-- <div class="hero-text"> -->
+                <h3 class="hero-intro">Hello world</h3>
+                <h1 class="hero-title">My name is <span class="special">Muwanguzi Joshua</span></h1>
+                <p class="hero-impression">I am fullstack developer. <br>I build full on web solutions with the <br> necessary tools.</p>
+            <!-- </div> -->
+            <ul class="cta hero-cta">
+                <li class="single-cta">See my work</li>
+                <li class="single-cta">Contact me</li>
+            </ul>
+        </div>
+    </section>
+
+    <section class="about">
+        <div class="container">
+            <!-- <div class="about-text"> -->
+                <h3 class="section-title">About Me</h3>
+                <div class="about-content">
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus dolorum illo quod earum officiis excepturi veniam, velit ea quis commodi, quidem odio mollitia vel aliquam! <span class="big-dev">Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis, rem eum consequatur dolor et provident voluptatum quae nobis dignissimos animi minus dolorem consequuntur ullam amet officiis illum omnis voluptatem vel. <br></span>
+                    </p>
+                                <!-- </div> -->
+                    <div class="about-img"><img src="{% static 'images/pexels-máximo-3992435.jpg'%}" alt="" width=""></div>
+                    <p class="small-dev">Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis, rem eum consequatur dolor et provident voluptatum quae nobis dignissimos animi minus dolorem consequuntur ullam amet officiis illum omnivoluptatem vel.</p>
+                </div>
+                <p class="resume special">See my Resume</p>
+        </div>
+    </section>
+
+    <section class="work">
+        <div class="container">
+            <h1 class="section-title">My Work</h1>
+            <div class="work-info">
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Non pariatur perspiciatis velit quibusdam odit officia, animi cum cumque eaque quam magni deleniti est minus dolor architecto ex esse, expedita fugit.
+            </div>
+            <div class="all-work">
+                <div class="single-work">
+                    <div class="work-image"></div>
+                    <div class="work-info">
+                        <div class="work-text">
+                            <h3 class="work-title"></h3>
+                            <p class="work-detail"></p>
+                        </div>
+                        <div class="work-cta cta"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+{% endblock content %}

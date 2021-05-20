@@ -1,0 +1,542 @@
+@import url('https://fonts.googleapis.com/css2?family=Coming+Soon&family=Jua&family=Kiwi+Maru:wght@300;400;500&family=Open+Sans:ital,wght@0,300;0,400;1,400&family=Poppins:ital,wght@0,200;0,300;1,300&family=Yusei+Magic&display=swap');
+
+:root{
+        --primary-color: azure;
+        --yellow-color: #FEE715FF;
+        --black-color: #101820FF;
+        --chalk-white: #ebeeec;
+        --main-font: 'Kiwi Maru';
+        --logo-font: 'Coming Soon';
+    }
+
+*, *::before, *::after{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body{
+    /* font-family: var(--main-font); */
+    font-family: 'Poppins';
+    background-color: var(--chalk-white);
+}
+
+
+header{
+    /* display: none; */
+    position: fixed;
+    z-index: 1;
+    color: red;
+    width: 100%;
+    /* background: yellow; */
+    /* background-color: #010318; */
+    /* border-bottom: red solid 1px; */
+    /* padding: 50px 0; */
+    padding: 1.5rem auto;
+}
+
+img{
+    max-width: 100%;
+}
+
+li{
+    list-style: none;
+}
+
+section{
+    padding: 50px 0;
+}
+
+
+.navigation{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    /* padding: 0 2rem; */
+    /* max-width: 1500px; */
+    /* background: yellow; */
+    padding: 1.5rem 0;
+    margin: 0 auto;
+    width: 80%;
+}
+
+.main{
+    background-color: #010318;
+    color: var(--chalk-white);
+    display: flex;
+    align-items: center;
+    position: relative;
+    padding: 7rem 0;
+    z-index: 2;
+    /* background: red; */
+    height: 100vh;
+}
+
+.nav_items{
+    display: flex;
+}
+
+.special{
+    color: red;
+}
+
+.container{
+    margin: 0 auto;
+    width: 80%;
+    max-width: 600px;
+}
+
+
+/* General */
+
+.section-title{
+    margin-bottom: 1.5rem;
+    font-size: 1.6rem;
+    position: relative;
+}
+
+.section-title::after{
+    content: '';
+    height: 3px;
+    width: 100%;
+    bottom: 0;
+    left: 0;
+    background-color: red;
+    position: absolute;
+}
+
+/* hero starts */
+
+.hero-intro, .hero-impression{
+    color: lightslategray;
+}
+.hero-title{
+    padding-bottom: 2rem;
+}
+
+.cta{
+    color: red;
+    font-size: 1.2rem;
+    margin-top: 2rem;
+}
+
+
+.hero-cta{
+    display: flex;
+}
+
+.single-cta + .single-cta{
+    margin-left: 1rem;
+}
+
+/* start about */
+.about{
+    /* background-color: #F4F2EC; */
+    color: #010318;
+}
+
+.big-dev{
+    display: none;
+    visibility: hidden;
+}
+
+.about-img{
+    margin: 1rem 0;
+}
+
+.resume{
+    margin-top: 1rem;
+    font-size: 1.5rem;
+    font-weight: 700;
+}
+
+/* About end */
+
+.work{
+    background-color:#e5e6e5;
+    color: #010318;
+    height: 500px;
+}
+
+
+
+.single-work-wrapper{
+    background-color: #d8e4dd;
+    /* padding: 2rem; */
+}
+
+
+.single-work{
+    margin-bottom: 2rem;
+    padding-bottom: 1rem;
+    /* border-bottom: 2px var(--black-color) solid; */
+}
+
+.work-title{
+    margin-bottom: .5rem;
+}
+
+.work-cta{
+    padding-top: .5rem;
+    color: red;
+    font-size: 1.3rem;
+    display: flex;
+    justify-content: space-between;
+}
+
+.work-image{
+    margin-top: .5rem;
+}
+
+.project-view{
+    color: var(--black-color);
+}
+
+
+.project-view .fa-github {
+    margin-left: .35rem;
+    margin-right: .8rem;
+}
+.project-view .fa-eye{
+    margin-left:.8rem;
+    margin-right: .35rem;
+}
+
+
+/* Contact */
+.contact{
+    background-color: #d8e4dd;
+}
+
+.contact-info__text{
+    background-color: #cae9d7;
+    margin-bottom: 1rem;
+}
+
+
+.wrapper-up{
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+}
+
+.info-item + .info-item{
+    margin-top: 1rem;
+}
+
+
+.text-info{
+    margin-left: 1rem;
+    /* margin-top: 1rem; */
+}
+
+.text-info h3{
+    margin-top: 4px;
+    font-size: 1.2rem;
+}
+
+.icon{
+    font-size: 1.6rem;
+    margin-top: 0;
+    color: red;
+    /* padding-top: 0; */
+}
+
+
+/* contact form */
+.form-item{
+    margin-top: .5rem;
+}
+
+.info-item_title__text{
+    display: flex;
+}
+.form-item p{
+    font-size: 1.2rem;
+    margin-bottom: .5rem;
+    font-weight: 700;
+}
+
+.form-item input, textarea{
+    font-size: 1.2rem;
+    border: none;
+    outline: none;
+    border-bottom: 2px solid #010318;
+    padding: 1rem;
+    background-color: unset;
+    width: 100%;
+}
+
+/* textarea{
+    resize: none;
+} */
+#contact-submit{
+    margin-top: 2rem;
+    border: none;
+    color: red;
+    background-color:unset;
+    outline: none;
+    /* margin-left: 1.5rem; */
+    font-size: 1.5rem;
+}
+
+/* footer */
+
+footer{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: var(--chalk-white);
+    background-color: #010318;
+}
+
+.footer-content{
+    padding: 3rem 0;
+}
+
+.footer-socials i{
+    margin-left: .6rem;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Responsiveness in order */
+
+/* Width 600 + */
+@media (max-width: 450px){
+    .work-small{
+        display: none;
+    }
+}
+
+@media(min-width: 600px){
+    .container{
+        width: 60%;
+    }
+}
+
+@media (max-width: 899px){
+    .work-and-cta {
+        padding: 1rem;
+        }
+}
+
+/* Width 900+ */
+
+@media(min-width: 900px){
+
+    h1, h3{
+        font-size: 1.6rem;
+    }
+
+    section{
+        padding: 100px 0;
+    }
+
+    .container {
+        max-width: 1000px;
+        width: 70%;
+    }
+
+    .intro-text p{
+        font-size: 1.4rem;
+    }
+
+    .intro-cta{
+        margin-top: 2rem;
+        letter-spacing: 1px;
+        font-size: 1.4rem;
+    }
+
+    .cta + .cta{
+        margin-left: 1.5rem;
+    }
+
+    .section-title{
+        margin-bottom: 2rem;
+        font-size: 1.8rem;
+    }
+
+        /* About section */
+    .work-small{
+        display: none;
+    }
+    .about-content{
+        display: flex;
+        justify-content: space-between;
+        background-color: #ebeeec;
+        /* padding: 2rem; */
+    }
+
+    .about-content p{
+        margin-top: 1.4rem;
+        padding-right: 2rem;
+        font-size: 1rem;
+    }
+
+    .resume{
+        margin-top: -5rem;
+        /* font-size: 1.5rem;
+        font-weight: 700; */
+        /* margin-left: 2rem; */
+    }
+
+    .about-content img{
+        width: 1000px;
+    }
+
+    .small-dev{
+        display: none;
+        visibility: none;
+    }
+
+    .big-dev{
+        display: block;
+        visibility: visible;
+    }
+
+    /* Work section */
+    .single-work{
+        display: flex;
+        padding: 2rem;
+        border-bottom: none;
+    }
+
+    .single-work-item + .single-work-item{
+        margin-left: 1rem;
+    }
+
+    .work-image img{
+        width: 700px;
+    }
+
+    .work-title{
+        font-size: 1.4rem;
+    }
+    .work-and-cta{
+        font-size: .9rem;
+    }
+
+
+    /* Contact */
+    .contact_info-wrapper{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    .wrapper-up{
+        padding: 2rem;
+        /* display: flex; */
+        /* flex-direction: column; */
+    }
+
+    form{
+        width: 55%;
+        margin-left: 0;
+    }
+}
+
+/* Width 1000+ */
+
+@media(min-width: 1000px){
+    footer{
+        font-size: 1.3rem;
+    }
+}
+
+/* Width 1100+ */
+
+@media (min-width: 1100px){
+    .show-on-small{
+        display: none;
+    }
+
+    .intro-text p{
+        font-size: 1.3rem;
+        word-spacing: .2rem;
+        letter-spacing: 1.2px;
+    }
+
+    .about-content img{
+        width: 1000px;
+    }
+
+    .about-content p{
+        font-size: 1.2rem;
+        padding-right: 3rem;
+    }
+
+    /* work */
+
+    /* .work-title{
+        font-size: 1.5rem;
+    }
+    .work-and-cta{
+        font-size: 1rem;
+    } */
+
+
+}
+
+/* Width 1200+ */
+
+@media (min-width: 1200px){
+
+    .about-content{
+        display: flex;
+        justify-content: space-between;
+        background-color: #ebeeec;
+        /* padding: 3rem; */
+    }
+
+    .about-content p{
+        padding-right: 2rem;
+        font-size: 1.3rem;
+    }
+
+    .about-content img{
+        width: 1300px;
+    }
+
+    /* work */
+
+    /* .work-image img{
+        width: 700px;
+    } */
+
+    /* .work-title{
+        font-size: 1.7rem;
+    }*/
+    .work-and-cta{
+        font-size: 1.2rem;
+    }
+
+    footer{
+        font-size: 1.4rem;
+    }
+}
+
+/* Width 1357+ */
+
+@media (min-width: 1357px){
+    .about-content p{
+        font-size: 1.3rem;
+        padding-right: 3rem;
+    }
+
+    .about-content img{
+        width: 900px;
+    }
+}
