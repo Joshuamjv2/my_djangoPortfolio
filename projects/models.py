@@ -6,7 +6,7 @@ from taggit.managers import TaggableManager
 # Create your models here.
 class Project(models.Model):
     title = models.CharField(max_length=50)
-    date_created = models.DateTimeField()
+    date_created = models.DateTimeField(auto_now_add=True)
     slug = models.SlugField(max_length=50)
     featured = models.BooleanField(default=False)
     tags = TaggableManager()

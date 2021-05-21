@@ -1,0 +1,49 @@
+{% extends 'base.html' %}
+{% load static %}
+
+
+{% block content %}
+<section class="work">
+    <div class="container">
+        <h1 class="section-title">See what I have been working on</h1>
+        <!-- <div class="work-info">
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Non pariatur perspiciatis velit quibusdam odit officia, animi cum cumque eaque quam magni deleniti est minus dolor architecto ex esse, expedita fugit.
+        </div> -->
+        {% if tag %}
+            <p class="tag_title" style="font-weight: 700;">Projects I made with {{tag}}.</p>
+        {% endif %}
+        <div class="all-work">
+            {% for project in projects %}
+                <div class="single-work">
+                    <div class="work-image">
+                        <img src="{% static 'images/phone.jpg'%}" alt="">
+                    </div>
+                    <!-- <div class="work-info"> -->
+                        <div class="work-text">
+                            <h3 class="work-title">{{project.title}}</h3>
+                            <ul class="tags">
+                                {% for tag in project.tags.all %}
+                                    <li class="tag">
+                                    <a href="{% url 'all_projects_by_tagname' tag %}" style="text-decoration: none;">{{tag}}</a>
+                                    </li>
+                                {% endfor %}
+                            </ul>
+                            <p class="work-detail">
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt soluta exercitationem velit quod, atque nemo corrupti facere quis repudiandae rem rerum ipsam eum.
+                            </p>
+                        <ul class="work-cta">
+                            <li class="github">
+                                <span><i class="fa fa-github cta" aria-hidden="true">
+                                </i></span>source</li>
+                            <li class="live-site"><span><i class="cta fa fa-eye" aria-hidden="true"></i></span>live</li>
+                        </ul>
+                    </div>
+                    <!-- </div> -->
+                </div>
+            {% endfor %}
+        </div>
+        <!-- <p class="cta see-all">See all my work</p> -->
+    </div>
+</section>
+{% endblock content %}
+
