@@ -2,6 +2,7 @@ from django.shortcuts import get_object_or_404, render
 from django.http import HttpResponse, HttpResponseRedirect
 from .models import Project
 from taggit.models import Tag
+from django.core.paginator import Paginator, EmptyPage, PageNotAnInteger
 # Create your views here.
 
 def home(request):
@@ -10,10 +11,18 @@ def home(request):
 
 
 def all_projects(request, tag_name = None):
-    projects = Project.objects.all()
+    project_list = Project.objects.all()
     tag = None
     if tag_name:
         tag = get_object_or_404(Tag, name=tag_name)
-        projects = projects.filter(tags__in=[tag])
+        project_list = project_list.filter(tags__in=[tag])
         print(type(tag))
+    paginator = Paginator(project_list, 4)
+    page = request.GET.get('page')
+    try:
+        projects  = paginator.page(page)
+    except  PageNotAnInteger:
+        projects = paginator.page(1)
+    except EmptyPage:
+        projects = paginator.page(paginator.num_pages)
     return render(request, 'projects/all_projects.html', {'projects':projects, 'tag':tag})

@@ -10,6 +10,7 @@ class Project(models.Model):
     slug = models.SlugField(max_length=50)
     featured = models.BooleanField(default=False)
     tags = TaggableManager()
+    image = models.ImageField(upload_to='images', blank=True)
     live_site = models.URLField(max_length=500, blank=True)
     git_repo = models.URLField(max_length=500, blank=True)
     project_detail = models.TextField(blank=True)

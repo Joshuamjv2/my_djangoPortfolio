@@ -42,7 +42,11 @@
                 {% for project in projects %}
                     <div class="single-work">
                         <div class="work-image">
-                            <img src="{% static 'images/phone.jpg'%}" alt="">
+                            {% if project.image %}
+                                <img src="{{project.image.url}}" alt="">
+                                {% else %}
+                                <img src="{% static 'images/phone.jpg'%}" alt="">
+                            {% endif %}
                         </div>
                         <!-- <div class="work-info"> -->
                             <div class="work-text">
