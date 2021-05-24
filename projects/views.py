@@ -1,9 +1,15 @@
+# inbuilt
 from django.shortcuts import get_object_or_404, render
 from django.http import HttpResponse, HttpResponseRedirect
+# local project files
+from .forms import ContactForm
 from .models import Project
+# more functionality files
 from taggit.models import Tag
 from django.core.paginator import Paginator, EmptyPage, PageNotAnInteger
-# Create your views here.
+from django.core.mail import send_mail, get_connection
+
+
 
 def home(request):
     projects = Project.objects.filter(featured=True).order_by('-date_created')[:3]
@@ -26,3 +32,27 @@ def all_projects(request, tag_name = None):
     except EmptyPage:
         projects = paginator.page(paginator.num_pages)
     return render(request, 'projects/all_projects.html', {'projects':projects, 'tag':tag})
+
+
+def contact(request):
+    submitted = False
+    if request.method == 'POST':
+        form = ContactForm(request.POST)
+        if form.is_valid():
+            cd = form.cleaned_data
+            con = get_connection('django.core.mail.backends.console.EmailBackend')
+            send_mail(
+                cd['full_name'],
+                cd.get('email'),
+                cd['message'],
+                ['myportfolio@example.com'],
+                connection=con
+            )
+            return HttpResponseRedirect('/contact?submitted=True')
+        else:
+            print(form.errors)
+    else:
+        form = ContactForm()
+        if 'submitted' in request.GET:
+                submitted = True
+    return render(request, 'contact/contact.html', {'form':form, 'submitted':submitted})
