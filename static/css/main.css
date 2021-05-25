@@ -25,16 +25,43 @@ html, body{
 
 
 header{
-    /* display: none; */
+    display: none;
     position: fixed;
     z-index: 1;
     color: red;
     width: 100%;
-    /* background: yellow; */
+    /* background: #c7c9c7; */
+    /* padding: .6rem 0; */
+    background-color: rgb(233, 233, 233);
+    opacity: 90%;
     /* background-color: #010318; */
     /* border-bottom: red solid 1px; */
     /* padding: 50px 0; */
-    padding: 1.5rem auto;
+    /* padding: 1.5rem auto; */
+}
+
+.hambuger{
+    position: relative;
+}
+
+.hambuger, .hambuger::before, .hambuger::after{
+    content: '';
+    height: 3px;
+    width: 2rem;
+    background-color: #010318;
+    background: red;
+}
+
+.hambuger::before{
+    position: absolute;
+    bottom: .5rem;
+    /* width: 2.5rem; */
+}
+
+.hambuger::after{
+    position: absolute;
+    top: .5rem;
+    /* width: 2.2rem; */
 }
 
 a{
@@ -53,6 +80,7 @@ li{
 
 section{
     padding: 50px 0;
+    /* margin-top: 2rem; */
 }
 
 
@@ -61,11 +89,17 @@ section{
     justify-content: space-between;
     align-items: center;
     /* padding: 0 2rem; */
-    /* max-width: 1500px; */
+    max-width: 1400px;
     /* background: yellow; */
-    padding: 1.5rem 0;
+    padding: 2rem 0;
     margin: 0 auto;
-    width: 80%;
+    /* margin-bottom: 1.5rem; */
+    width: 90%;
+}
+
+.logo{
+    font-weight: 700;
+    font-size: 1.6rem;
 }
 
 .main{
@@ -597,3 +631,9 @@ footer p{
         font-size: 1.1rem;
     }
 }
+
+/* @media(orientation: landscape){
+    .main{
+        height: 70vh;
+    }
+} */

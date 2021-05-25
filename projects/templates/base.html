@@ -11,46 +11,24 @@
     <title>Document</title>
 </head>
 <body>
-    {% block content %}
     <header>
         <div class="navigation">
                 <ul class="logo">
-                    <li class="nav_item">Joshua.</li>
+                    <li class="nav_item">Josh.</li>
                 </ul>
-            <ul class="nav_items">
+            <ul class="nav_items" style="display: none;">
                 <!-- <div class="hambuger"></div> -->
                 <li class="nav_item">home</li>
                 <li class="nav_item">about</li>
                 <li class="nav_item">contact</li>
                 <li class="nav_item">resume</li>
             </ul>
+            <div class="hambuger"></div>
         </div>
     </header>
-
-
-
-
-
-
-
-    
-
-
-    
-
-
-
-
-
-
-
-
-
-
-
+    {% block content %}
 
     {% endblock content %}
-    
     <footer>
         <!-- <section> -->
             <div class="container">

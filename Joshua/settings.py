@@ -40,6 +40,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'storages',
 ]
 
 MIDDLEWARE = [
@@ -78,10 +79,27 @@ WSGI_APPLICATION = 'Joshua.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': 'my_django_portfolio',
+        'USER': 'postgres',
+        'PASSWORD':'josh256',
+        'HOST': 'localhost',
+        'PORT': '5432'
     }
 }
+
+#AWS3 BUCKETS CONFIG
+AWS_QUERYSTRING_AUTH = False
+DEFAULT_FILE_STORAGE = 'storages.backends.s3boto3.S3Boto3Storage'
+AWS_ACCESS_KEY_ID = 'AKIA5NN4DW6NPQVH3AGZ'
+AWS_SECRET_ACCESS_KEY = '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'
+AWS_STORAGE_BUCKET_NAME = 'mjv-256-portfolio'
+
+
+#AWS_S3_FILE_OVERWRITE = ''
+#AWS_DEFAULT_ACL = ''
+
+
 
 
 # Password validation
