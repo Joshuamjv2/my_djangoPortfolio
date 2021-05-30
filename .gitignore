@@ -1,3 +1,3 @@
 __pycahche__/
 *.os
-env
+.env
