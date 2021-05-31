@@ -25,19 +25,23 @@ body {
 }
 
 header {
-  display: none;
+  /* display: none; */
   position: fixed;
-  z-index: 1;
-  color: red;
+  z-index: 5;
+  color: black;
   width: 100%;
   /* background: #c7c9c7; */
   /* padding: .6rem 0; */
-  background-color: rgb(233, 233, 233);
-  opacity: 90%;
-  /* background-color: #010318; */
+  /* background-color: #fff; */
+  /* opacity: 90%; */
+  /* background-color: black; */
   /* border-bottom: red solid 1px; */
   /* padding: 50px 0; */
   /* padding: 1.5rem auto; */
+}
+
+i{
+  color: #E04031;
 }
 
 .hambuger {
@@ -50,8 +54,8 @@ header {
   content: "";
   height: 3px;
   width: 2rem;
-  background-color: #010318;
-  background: red;
+  background-color: #333333;
+  background: #E04031;
 }
 
 .hambuger::before {
@@ -74,6 +78,14 @@ img {
   display: block;
 }
 
+/* Call to action area */
+
+.btn{
+  color: #fff;
+  background-color: #E04031;
+  padding: .5rem .7rem;
+}
+
 li {
   list-style: none;
 }
@@ -93,13 +105,19 @@ section {
   width: 90%;
 }
 
+.logo li{
+  /* visibility: invisible; */
+  /* content-visibility: none; */
+  display: none;
+}
+
 .logo {
   font-weight: 700;
   font-size: 1.6rem;
 }
 
 .main {
-  background-color: #010318;
+  background-color: #fff;
   color: var(--chalk-white);
   display: flex;
   justify-content: center;
@@ -115,7 +133,7 @@ section {
 }
 
 .special {
-  color: red;
+  color: black;
 }
 
 .container {
@@ -126,7 +144,9 @@ section {
 
 .section-title {
   margin-bottom: 1.5rem;
-  font-size: 1.6rem;
+  display: inline-block;
+  color: #E04031;
+  font-size: 1.7rem;
   position: relative;
 }
 
@@ -136,7 +156,7 @@ section {
   width: 100%;
   bottom: 0;
   left: 0;
-  background-color: red;
+  background-color: #BFBFBF;
   position: absolute;
 }
 
@@ -144,15 +164,23 @@ section {
 
 .hero-intro,
 .hero-impression {
-  color: lightslategray;
+  color: #404040;
+}
+
+.hero-intro{
+  font-size: 1.7rem;
 }
 .hero-title {
   padding-bottom: 2rem;
+  font-size: 2rem;
+  font-weight: 700;
+  color:#E04031;
 }
 
 .cta {
-  color: red;
-  font-size: 1.2rem;
+  color: #E04031;
+  /* color: black; */
+  font-size: 1.1rem;
 }
 
 .hero .cta {
@@ -170,7 +198,8 @@ section {
 /* start about */
 .about {
   background-color: rgb(233, 233, 233);
-  color: #010318;
+  background-color: #fff;
+  color: #333333;
 }
 
 .big-dev {
@@ -192,7 +221,8 @@ section {
 
 .work {
   background-color: #e5e6e5;
-  color: #010318;
+  background-color: #fff;
+  color: #333333;
 }
 
 .all-work {
@@ -200,14 +230,14 @@ section {
 }
 
 .single-work {
-  background-color: #d6d8d6;
-  border-radius: 0.8rem;
+  background-color: #F2F2F2;
+  border-radius: unset;
 }
 
-.see-all {
+/* .see-all {
   margin-top: -0.5rem;
   font-size: 1.5rem;
-}
+} */
 
 .single-work {
   margin-bottom: 2rem;
@@ -220,6 +250,7 @@ section {
 
 .work-title {
   margin-top: 0.5rem;
+  color: black;
 }
 
 .work-detail {
@@ -234,24 +265,31 @@ section {
   font-weight: 600;
 }
 
+.work-cta li{
+  color: black;
+  /* color: #E04031; */
+}
+
 .work-cta .cta {
   padding-right: 0.2rem;
 }
 
 .work-image img {
-  border-radius: 0.8rem;
+  border-radius: unset;
 }
 
 .tags {
   font-size: 0.7rem;
-  color: red;
+  color: black;
+  color: #fff;
   margin-bottom: 0;
 }
 
 .tag {
-  background-color: #010318;
+  /* background-color: #333333; */
+  background: #E04031;
   display: inline-block;
-  border-radius: 0.4rem;
+  /* border-radius: 0.4rem; */
   padding: 0.3rem 0.5rem;
   margin: 0.5rem 0;
   margin-right: 0.4rem;
@@ -260,6 +298,7 @@ section {
 /* Contact */
 .contact {
   background-color: #d6d8d6;
+  background-color: #fff;
 }
 
 .contact_info-wrapper{
@@ -271,11 +310,11 @@ section {
 }
 
 .contact-info__text {
-  background-color: #c7c9c7;
+  background-color: #F2F2F2;
   /* margin-bottom: 2rem; */
   /* padding: 2rem; */
   max-width: 300px;
-  border-radius: 0.8rem;
+  border-radius: unset;
 }
 
 .wrapper-up {
@@ -297,16 +336,21 @@ section {
 .text-info h3 {
   margin-top: 4px;
   font-size: 1.2rem;
+  color: #333333;
 }
 
 .icon {
   font-size: 1.6rem;
   margin-top: 0;
-  color: red;
+  /* color: #8FB399; */
   /* padding-top: 0; */
 }
 
 /* contact form */
+
+::placeholder{
+  color: #333333;
+}
 
 .form-item {
   margin-top: 0.5rem;
@@ -321,28 +365,34 @@ textarea {
   font-size: 1.2rem;
   border: none;
   outline: none;
-  border-bottom: 2px solid #010318;
+  border-bottom: 2px solid #BFBFBF;
   padding: 1rem;
   background-color: unset;
   width: 100%;
 }
 
 #contact-submit {
+  /* display: none; */
   margin-top: 2rem;
+  /* margin-bottom: -4rem; */
   border: none;
-  color: red;
-  background-color: unset;
+  /* color: #8FB399; */
+  /* background-color: unset; */
   outline: none;
   font-size: 1.5rem;
 }
 
 /* footer */
 footer {
-  color: lightslategrey;
-  background-color: #010318;
+  color: #333333;
+  background-color: #fff;
   padding: 3rem 0;
+  /* border-top: 2px solid #BFBFBF; */
+  /* width: 80%; */
+  /* margin: 0 auto; */
   text-align: center;
 }
+
 
 footer i {
   padding: 0 0.5rem;
@@ -369,6 +419,10 @@ footer p {
     font-size: 1.6rem;
   }
 
+  /* .logo li{
+    display: unset;
+  } */
+
   section {
     padding: 100px 0;
   }
@@ -394,7 +448,8 @@ footer p {
 
   .section-title {
     margin-bottom: 2rem;
-    font-size: 1.8rem;
+    /* font-size: 2rem; */
+    /* font-size: unset; */
   }
 
   /* About section */
@@ -438,7 +493,7 @@ footer p {
     display: flex;
     align-items: center;
     flex-direction: row;
-    justify-content: space-between;
+    justify-content: flex-start;
   }
 
   .wrapper-up {
@@ -446,8 +501,17 @@ footer p {
   }
 
   form {
-    width: 55%;
+    width: 100%;
     margin-left: 2rem;
+  }
+
+  .contact .container{
+    position: relative;
+  }
+  #contact-submit{
+    position: absolute;
+    right: 0;
+    /* margin-left: 45%; */
   }
 }
 
@@ -519,6 +583,13 @@ footer p {
 /* Width 1200+ */
 
 @media (min-width: 1200px) {
+
+  .section-title {
+    /* margin-bottom: 2rem; */
+    font-size: 2rem;
+    /* font-size: unset; */
+  }
+
   .about-content {
     display: flex;
     justify-content: space-between;
@@ -532,6 +603,8 @@ footer p {
   .about-content img {
     width: 1300px;
   }
+
+  
 
   footer {
     font-size: 1.4rem;
