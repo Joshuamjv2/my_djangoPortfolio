@@ -3,7 +3,7 @@
 
 
 {% block content %}
-    <section class="main">
+    <section class="main" id="home-section">
         <div class="container hero">
             <!-- <div class="hero-text"> -->
                 <p class="hero-intro">Hello world</hp>
@@ -11,13 +11,13 @@
                 <p class="hero-impression">I am a web developer. <br>I build full on web solutions with the <br> necessary tools.</p>
             <!-- </div> -->
             <ul class="cta hero-cta">
-                <li class="single-cta btn">My Work</li>
-                <li class="single-cta btn">Contact Me</li>
+                <li class="single-cta btn"><a href="#work-section">My Work</a></li>
+                <li class="single-cta btn"><a href="#contact-section">Contact Me</a></li>
             </ul>
         </div>
     </section>
 
-    <section class="about">
+    <section class="about" id="about-section">
         <div class="container">
             <!-- <div class="about-text"> -->
                 <h3 class="section-title">About Me</h3>
@@ -32,7 +32,7 @@
         </div>
     </section>
 
-    <section class="work">
+    <section class="work" id="work-section">
         <div class="container">
             <h1 class="section-title">My Work</h1>
             <div class="work-info">
@@ -76,75 +76,4 @@
         </div>
     </section>
 
-
-
-    <section class="contact">
-        <div class="container">
-            <h1 class="section-title">Contact Me</h1>
-
-            <div class="contact_info-wrapper">
-
-                <div class="contact-info__text">
-
-
-
-                    <div class="wrapper-up">
-                        <div class="info-item">
-                            <div class="info-item_title__text">
-                                <div class="icon">
-                                    <i class="fa fa-whatsapp" aria-hidden="true"></i>
-                                </div>
-                                <div class="text-info">
-                                    <h3 class="title">Whatsapp</h3>
-                                    <p>+25675843885</p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="info-item">
-                            <div class="info-item_title__text">
-                                <div class="icon">
-                                    <i class="fa fa-map-signs" aria-hidden="true"></i>
-                                </div>
-                                <div class="text-info">
-                                    <h3 class="title">Address</h3>
-                                    <p>Kampala, Uganda</p>
-                                    <p>P.O Box, 35</p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="info-item">
-                            <div class="info-item_title__text">
-                                <div class="icon">
-                                    <i class="fa fa-envelope-o" aria-hidden="true"></i>
-                                </div>
-                                <div class="text-info">
-                                    <h3 class="title">Email</h3>
-                                    <p>joshuamjv3@gmail.com</p>
-                                    <!-- <p>P.O Box, 35</p> -->
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                </div>
-
-                <form action="" class="contact-info__form" method="POST" id="contact">
-                    {% csrf_token %}
-                    <div class="form-item">
-                        <input type="text" name="" id="" placeholder="Full Name">
-                    </div>
-
-                    <div class="form-item">
-                        <input type="email" name="" id="" placeholder="Email">
-                    </div>
-
-                    <div class="form-item">
-                        <textarea name="" id="" cols="30" rows="6" placeholder="Your message"></textarea>
-                    </div>
-                    <!-- <input type="submit" value="send" id="contact-submit" class="btn"> -->
-                </form>
-            </div>
-            <input type="submit" value="send" id="contact-submit" class="btn" form="contact">
-        </div>
-    </section>
 {% endblock content %}
