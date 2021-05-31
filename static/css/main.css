@@ -21,7 +21,7 @@
 /* General */
 html,
 body {
-  font-family: "Poppins";
+  font-family: 'Poppins', sans-serif;
   overflow-wrap: break-word;
   background-color: var(--white);
 }
@@ -352,6 +352,9 @@ section {
 
 ::placeholder{
   color: #333333;
+  font-family: 'Poppins' sans-serif;
+  font-size: 1.2rem;
+  /* text-transform: ; */
 }
 
 .form-item {

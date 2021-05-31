@@ -44,8 +44,9 @@ def contact(request):
             send_mail(
                 cd['full_name'],
                 cd.get('email'),
-                cd['message'],
+                cd['message'][:50].replace('\n', ' ').replace('\t', '').replace('\r', ''),
                 ['myportfolio@example.com'],
+                fail_silently=False,
                 connection=con
             )
             return HttpResponseRedirect('/contact?submitted=True')
