@@ -5,6 +5,7 @@
   --yellow-color: #fee715ff;
   --black-color: #101820ff;
   --chalk-white: #ebeeec;
+  --white: #fff;
   --main-font: "Kiwi Maru";
   --logo-font: "Coming Soon";
 }
@@ -22,6 +23,7 @@ html,
 body {
   font-family: "Poppins";
   overflow-wrap: break-word;
+  background-color: var(--white);
 }
 
 header {
@@ -32,7 +34,7 @@ header {
   width: 100%;
   /* background: #c7c9c7; */
   /* padding: .6rem 0; */
-  /* background-color: #fff; */
+  /* background-color: var(--white); */
   /* opacity: 90%; */
   /* background-color: black; */
   /* border-bottom: red solid 1px; */
@@ -81,7 +83,7 @@ img {
 /* Call to action area */
 
 .btn{
-  color: #fff;
+  color: var(--white);
   background-color: #E04031;
   padding: .5rem .7rem;
 }
@@ -117,7 +119,7 @@ section {
 }
 
 .main {
-  background-color: #fff;
+  background-color: var(--white);
   color: var(--chalk-white);
   display: flex;
   justify-content: center;
@@ -197,8 +199,6 @@ section {
 
 /* start about */
 .about {
-  background-color: rgb(233, 233, 233);
-  background-color: #fff;
   color: #333333;
 }
 
@@ -220,8 +220,7 @@ section {
 /* About end */
 
 .work {
-  background-color: #e5e6e5;
-  background-color: #fff;
+  background-color: var(--white);
   color: #333333;
 }
 
@@ -282,7 +281,7 @@ section {
 .tags {
   font-size: 0.7rem;
   color: black;
-  color: #fff;
+  color: var(--white);
   margin-bottom: 0;
 }
 
@@ -303,10 +302,6 @@ section {
 /* for the all projects page */
 
 /* Contact */
-.contact {
-  background-color: #d6d8d6;
-  background-color: #fff;
-}
 
 .contact_info-wrapper{
   display: flex;
@@ -392,7 +387,7 @@ textarea {
 /* footer */
 footer {
   color: #BFBFBF;
-  background-color: #fff;
+  background-color: var(--white);
   padding: 3rem 0;
   /* border-top: 2px solid #BFBFBF; */
   /* width: 80%; */
