@@ -273,12 +273,13 @@ section {
 .contact-info__text {
   background-color: #c7c9c7;
   /* margin-bottom: 2rem; */
+  /* padding: 2rem; */
   max-width: 300px;
   border-radius: 0.8rem;
 }
 
 .wrapper-up {
-  padding: 1.5rem;
+  padding: 1rem;
   display: flex;
   gap: 1rem;
   /* max-width: 300px; */
