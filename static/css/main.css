@@ -296,6 +296,12 @@ section {
   margin-right: 0.4rem;
 }
 
+/* for the all projects page */
+  .work-tag-intro{
+    color: #E04031;
+  }
+/* for the all projects page */
+
 /* Contact */
 .contact {
   background-color: #d6d8d6;

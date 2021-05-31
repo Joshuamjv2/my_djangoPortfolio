@@ -5,12 +5,12 @@
 {% block content %}
 <section class="work">
     <div class="container">
-        <h1 class="section-title">See what I have been working on</h1>
+        <h1 class="section-title">See what I've been working on.</h1>
         <!-- <div class="work-info">
             Lorem ipsum dolor sit amet, consectetur adipisicing elit. Non pariatur perspiciatis velit quibusdam odit officia, animi cum cumque eaque quam magni deleniti est minus dolor architecto ex esse, expedita fugit.
         </div> -->
         {% if tag %}
-            <p class="tag_title" style="font-weight: 700;">Projects I made with {{tag}}.</p>
+            <p class="tag_title" style="font-weight: 700;">Projects I made with <span class="work-tag-intro">{{tag}}</span>.</p>
         {% endif %}
         <div class="all-work">
             {% for project in projects %}
@@ -50,4 +50,5 @@
     </div>
 </section>
 {% endblock content %}
+
 
