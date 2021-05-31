@@ -4,7 +4,7 @@
   --primary-color: azure;
   --yellow-color: #fee715ff;
   --black-color: #101820ff;
-  --chalk-white: #ebeeec;
+  --chalk-white: #f2f2f2;
   --white: #fff;
   --main-font: "Kiwi Maru";
   --logo-font: "Coming Soon";
@@ -102,9 +102,9 @@ section {
   justify-content: space-between;
   align-items: center;
   max-width: 1400px;
-  padding: 2rem 0;
+  padding: 3rem 0;
   margin: 0 auto;
-  width: 90%;
+  width: 80%;
 }
 
 .logo li{
@@ -120,7 +120,7 @@ section {
 
 .main {
   background-color: var(--white);
-  color: var(--chalk-white);
+  /* color: var(--chalk-white); */
   display: flex;
   justify-content: center;
   align-items: center;
@@ -390,7 +390,7 @@ textarea {
 /* footer */
 footer {
   color: #BFBFBF;
-  background-color: var(--white);
+  /* background-color: var(--chalk-white); */
   padding: 3rem 0;
   /* border-top: 2px solid #BFBFBF; */
   /* width: 80%; */
@@ -429,7 +429,7 @@ footer p {
   } */
 
   section {
-    padding: 100px 0;
+    /* padding: 100px 0; */
   }
 
   .container {
@@ -642,8 +642,9 @@ footer p {
 /* for huge heights */
 @media(min-height:900px){
   .main{
-      padding: 15rem 0;
-      height: unset;
+      /* padding: 10rem 0; */
+      /* height: unset; */
+      background-color: var(--chalk-white);
   }
 }
 
@@ -651,7 +652,7 @@ footer p {
 @media(max-height:500px){
   .main{
     height: unset;
-    padding: 8rem 0;
+    padding: 7rem 0;
   }
 
   .hero-intro{
