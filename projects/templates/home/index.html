@@ -25,7 +25,7 @@
                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus dolorum illo quod earum officiis excepturi veniam, velit ea quis commodi, quidem Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ipsa, delectus? <span class="big-dev"><br>odio mollitia vel aliquam! adipisicing elit. Perferendis, rem eum consequaturLorem ipsum dolor sit amet consectetur dolor quae nobis dignissimos animi minus dolorem consequuntur ullam amet officiis</span>
                     </p>
                                 <!-- </div> -->
-                    <div class="about-img"><img src="{% static 'images/first-pic.jpg'%}" alt="" width=""></div>
+                    <div class="about-img"><img src="{% static 'images/josh.jpg'%}" alt="" width=""></div>
                     <p class="small-dev">Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis, rem eum consequatur dolor et provident voluptatum quae nobis dignissimos animi minus dolorem consequuntur ullam amet officiis illum omnivoluptatem vel.</p>
                 </div>
                 <!-- <p class="resume special">See my resume</p> -->
@@ -35,9 +35,6 @@
     <section class="work" id="work-section">
         <div class="container">
             <h1 class="section-title">My Work</h1>
-            <div class="work-info">
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Non pariatur perspiciatis velit quibusdam odit officia, animi cum cumque eaque quam magni deleniti est minus dolor architecto ex esse, expedita fugit.
-            </div>
             <div class="all-work">
                 {% for project in projects %}
                     <div class="single-work">
@@ -72,8 +69,19 @@
                     </div>
                 {% endfor %}
             </div>
-            <!-- <p class="cta see-all">See all my work</p> -->
+            <div class="work-autro">
+                <!-- <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Non pariatur perspiciatis velit quibusdam odit officia, animi cum cumque eaque quam magni deleniti est minus dolor architecto ex esse, expedita fugit.
+                </p> -->
+                <ul>
+                    <li class="btn">
+                        <a href="{%url 'all-projects'%}">See All Projects</a>
+                    </li>
+                </ul>
+            </div>
+            <!-- <p class="cta see-all">See all my work</p>-->
         </div>
     </section>
+
+    <!-- <section class="some-words"></section> -->
 
 {% endblock content %}

@@ -18,6 +18,7 @@
   box-sizing: border-box;
 }
 
+
 /* General */
 html,
 body {
@@ -147,7 +148,7 @@ section {
 .section-title {
   margin-bottom: 1.5rem;
   display: inline-block;
-  color: #E04031;
+  color: #333333;
   font-size: 1.7rem;
   position: relative;
 }
@@ -158,7 +159,7 @@ section {
   width: 100%;
   bottom: 0;
   left: 0;
-  background-color: #BFBFBF;
+  background-color: #E04031;
   position: absolute;
 }
 
@@ -198,7 +199,7 @@ section {
 }
 
 /* start about */
-.about {
+.about .about-content{
   color: #333333;
 }
 
@@ -211,17 +212,18 @@ section {
   margin: 1rem 0;
 }
 
-.resume {
+/* .resume {
   margin-top: 1rem;
   font-size: 1.5rem;
   font-weight: 700;
-}
+} */
 
 /* About end */
 
 .work {
   background-color: var(--white);
   color: #333333;
+  position: relative;
 }
 
 .all-work {
@@ -250,7 +252,7 @@ section {
 .work-title {
   margin-top: 0.5rem;
   font-size: 1.5rem;
-  color: black;
+  color: #E04031;
 }
 
 .work-detail {
@@ -286,14 +288,22 @@ section {
 }
 
 .tag {
-  /* background-color: #333333; */
-  background: #E04031;
+  background-color: #333333;
+  color: var(--white);
   display: inline-block;
   /* border-radius: 0.4rem; */
-  padding: 0.3rem 0.5rem;
+  padding: 0.2rem 0.5rem;
   margin: 0.5rem 0;
   margin-right: 0.4rem;
 }
+
+/* work-autro and all projects button */
+.work-autro .btn{
+  width: 10rem;
+  text-align:center;
+  margin: 0 auto;
+}
+
 
 /* for the all projects page */
   .work-tag-intro{
@@ -387,6 +397,13 @@ textarea {
   font-size: 1.5rem;
 }
 
+/* form errors */
+.errorlist li{
+  font-family: 'Poppins',sans-serif;
+  color: #E04031;
+  /* color: #404040; */
+}
+
 /* footer */
 footer {
   color: #BFBFBF;
@@ -429,7 +446,7 @@ footer p {
   } */
 
   section {
-    /* padding: 100px 0; */
+    padding: 100px 0;
   }
 
   .container {

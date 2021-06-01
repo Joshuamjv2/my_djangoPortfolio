@@ -13,6 +13,28 @@ from django.core.mail import send_mail, get_connection
 
 def home(request):
     projects = Project.objects.filter(featured=True).order_by('-date_created')[:3]
+    submitted = False
+    # if request.method == 'POST':
+    #     form = ContactForm(request.POST)
+    #     if form.is_valid():
+    #         cd = form.cleaned_data
+    #         con = get_connection('django.core.mail.backends.console.EmailBackend')
+    #         send_mail(
+    #             cd['full_name'],
+    #             cd['message'][:50].replace('\n', ' ').replace('\t', '').replace('\r', ''),
+    #             cd.get('email'),
+    #             ['myportfolio@example.com'],
+    #             fail_silently=False,
+    #             connection=con
+    #         )
+    #         return HttpResponseRedirect('/?submitted=True')
+    #     else:
+    #         print(form.errors)
+    # else:
+    #     form = ContactForm()
+    #     if 'submitted' in request.GET:
+    #             submitted = True
+    # return render(request, 'home/index.html', {'form':form, 'submitted':submitted,'projects':projects})
     return render(request, 'home/index.html', {'projects':projects})
 
 
@@ -37,21 +59,22 @@ def all_projects(request, tag_name = None):
 def contact(request):
     submitted = False
     if request.method == 'POST':
-        form = ContactForm(request.POST)
+        form = ContactForm(request.POST or None)
         if form.is_valid():
             cd = form.cleaned_data
             con = get_connection('django.core.mail.backends.console.EmailBackend')
             send_mail(
                 cd['full_name'],
-                cd.get('email'),
                 cd['message'][:50].replace('\n', ' ').replace('\t', '').replace('\r', ''),
+                cd.get('email'),
                 ['myportfolio@example.com'],
                 fail_silently=False,
                 connection=con
             )
             return HttpResponseRedirect('/contact?submitted=True')
-        else:
-            print(form.errors)
+        # else:
+        #     # form = ContactForm()
+        #     print(form.errors)
     else:
         form = ContactForm()
         if 'submitted' in request.GET:

@@ -56,8 +56,8 @@
                 {% csrf_token %}
                 {% for field in form %}
                     <div class="form-item">
-                        {{field.errors}}
                         {{field}}
+                        {{field.errors}}
                     </div>
                 {% endfor %}
                 <input type="submit" value="send" id="contact-submit" class="btn">
