@@ -92,7 +92,7 @@ DATABASES = {
     }
 }
 
-EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
+
 
 #AWS3 BUCKETS CONFIG
 AWS_QUERYSTRING_AUTH = False
@@ -161,5 +161,6 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 django_heroku.settings(locals())
 
+EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
 
 

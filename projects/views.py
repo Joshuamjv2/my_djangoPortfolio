@@ -68,7 +68,7 @@ def contact(request):
                 'message': 'Message: '+cd['message'].replace('\n', ' ').replace('\t', '').replace('\r', ''),
                 'email': 'Email: ' + cd['email']
             }
-            message = "\n".join(body.values())
+            message = "\n\n".join(body.values())
             send_mail(
                 cd['full_name'],
                 message,
