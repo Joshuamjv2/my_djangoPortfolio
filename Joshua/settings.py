@@ -94,7 +94,12 @@ DATABASES = {
 
 EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
 
-
+#AWS3 BUCKETS CONFIG
+AWS_QUERYSTRING_AUTH = False
+DEFAULT_FILE_STORAGE = 'storages.backends.s3boto3.S3Boto3Storage'
+AWS_ACCESS_KEY_ID = 'AKIA5NN4DW6NPQVH3AGZ'
+AWS_SECRET_ACCESS_KEY = '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'
+AWS_STORAGE_BUCKET_NAME = 'mjv-256-portfolio'
 
 
 #AWS_S3_FILE_OVERWRITE = ''
@@ -157,8 +162,4 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 django_heroku.settings(locals())
 
 
-EMAIL_BACKEND = 'django_ses.SESBackend'
-AWS_ACCESS_KEY_ID = 'AKIA5NN4DW6NIK2QYCMI'
-AWS_SECRET_ACCESS_KEY = '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'
-AWS_SES_REGION_NAME = 'us-east-2'
-AWS_SES_REGION_ENDPOINT ='email.us-east-2.amazonaws.com'
+
