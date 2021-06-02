@@ -180,12 +180,6 @@ section {
   color:#E04031;
 }
 
-.cta {
-  color: #E04031;
-  /* color: black; */
-  font-size: 1.1rem;
-}
-
 .hero .cta {
   margin-top: 2rem;
 }
@@ -212,11 +206,6 @@ section {
   margin: 1rem 0;
 }
 
-/* .resume {
-  margin-top: 1rem;
-  font-size: 1.5rem;
-  font-weight: 700;
-} */
 
 /* About end */
 
@@ -315,16 +304,12 @@ section {
 
 .contact_info-wrapper{
   display: flex;
-  /* justify-content: center; */
-  /* align-items: center; */
   gap: 2rem;
   flex-direction: column;
 }
 
 .contact-info__text {
   background-color: #F2F2F2;
-  /* margin-bottom: 2rem; */
-  /* padding: 2rem; */
   max-width: 300px;
   border-radius: unset;
 }
@@ -333,13 +318,9 @@ section {
   padding: 1rem;
   display: flex;
   gap: 1rem;
-  /* max-width: 300px; */
   flex-direction: column;
 }
 
-/* .info-item + .info-item {
-  margin-top: 1rem;
-} */
 
 .text-info {
   margin-left: 1rem;
@@ -387,31 +368,21 @@ textarea {
 }
 
 #contact-submit {
-  /* display: none; */
   margin-top: 2rem;
-  /* margin-bottom: -4rem; */
   border: none;
-  /* color: #8FB399; */
-  /* background-color: unset; */
   outline: none;
-  font-size: 1.5rem;
 }
 
 /* form errors */
 .errorlist li{
   font-family: 'Poppins',sans-serif;
   color: #E04031;
-  /* color: #404040; */
 }
 
 /* footer */
 footer {
   color: #BFBFBF;
-  /* background-color: var(--chalk-white); */
   padding: 3rem 0;
-  /* border-top: 2px solid #BFBFBF; */
-  /* width: 80%; */
-  /* margin: 0 auto; */
   text-align: center;
 }
 
@@ -441,10 +412,6 @@ footer p {
     font-size: 1.6rem;
   }
 
-  /* .logo li{
-    display: unset;
-  } */
-
   section {
     padding: 100px 0;
   }
@@ -470,8 +437,6 @@ footer p {
 
   .section-title {
     margin-bottom: 2rem;
-    /* font-size: 2rem; */
-    /* font-size: unset; */
   }
 
   /* About section */
@@ -607,9 +572,7 @@ footer p {
 @media (min-width: 1200px) {
 
   .section-title {
-    /* margin-bottom: 2rem; */
     font-size: 2rem;
-    /* font-size: unset; */
   }
 
   .about-content {
@@ -659,8 +622,6 @@ footer p {
 /* for huge heights */
 @media(min-height:900px){
   .main{
-      /* padding: 10rem 0; */
-      /* height: unset; */
       background-color: var(--chalk-white);
   }
 }
