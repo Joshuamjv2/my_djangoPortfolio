@@ -180,6 +180,10 @@ section {
   color:#E04031;
 }
 
+.cta{
+  font-size: 1.1rem;
+}
+
 .hero .cta {
   margin-top: 2rem;
 }
@@ -291,14 +295,11 @@ section {
   width: 10rem;
   text-align:center;
   margin: 0 auto;
+  font-size: 1.1rem;
 }
 
 
-/* for the all projects page */
-  .work-tag-intro{
-    color: #E04031;
-  }
-/* for the all projects page */
+
 
 /* Contact */
 
@@ -371,6 +372,7 @@ textarea {
   margin-top: 2rem;
   border: none;
   outline: none;
+  font-size: 1.1rem;
 }
 
 /* form errors */
