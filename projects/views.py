@@ -62,14 +62,20 @@ def contact(request):
         form = ContactForm(request.POST or None)
         if form.is_valid():
             cd = form.cleaned_data
-            con = get_connection('django.core.mail.backends.console.EmailBackend')
+            # con = get_connection('django.core.mail.backends.console.EmailBackend')
+            body = {
+                'full_name': 'Name: ' + cd['full_name'],
+                'message': 'Message: '+cd['message'].replace('\n', ' ').replace('\t', '').replace('\r', ''),
+                'email': 'Email: ' + cd['email']
+            }
+            message = "\n".join(body.values())
             send_mail(
                 cd['full_name'],
-                cd['message'][:50].replace('\n', ' ').replace('\t', '').replace('\r', ''),
-                cd.get('email'),
-                ['myportfolio@example.com'],
+                message,
+                'joshuamjv22@gmail.com',
+                ['joshuamjv22@gmail.com',],
                 fail_silently=False,
-                connection=con
+                # connection=con
             )
             return HttpResponseRedirect('/contact?submitted=True')
         # else:
