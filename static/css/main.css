@@ -621,13 +621,6 @@ footer p {
 }
 
 
-/* for huge heights */
-@media(min-height:900px){
-  .main{
-      background-color: var(--chalk-white);
-  }
-}
-
 /* for tiny heights */
 @media(max-height:500px){
   .main{
