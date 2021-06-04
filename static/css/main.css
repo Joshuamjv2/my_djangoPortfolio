@@ -161,6 +161,10 @@ section {
   left: 0;
   background-color: #E04031;
   position: absolute;
+
+  /* animation: hero-cta 3s ease-in-out;
+  animation-delay: 4s;
+  animation-fill-mode: forwards; */
 }
 
 /* hero starts */
@@ -189,7 +193,6 @@ section {
 }
 
 .hero-cta {
-  opacity: 0;
   display: flex;
 }
 
@@ -662,11 +665,22 @@ footer p {
   }
 }
 
-/* hero page buttons */
-.hero-cta{
+/* hero page buttons and hambuger menu*/
+.hero-cta, .hambuger, .hambuger::before, .hambuger::after{
+  opacity: 0;
   animation: hero-cta 3s ease-in-out;
   animation-delay: .5s;
   animation-fill-mode: forwards;
+}
+
+.hambuger::before{
+  animation-delay: .16s;
+  animation-duration: 1s;
+}
+
+.hambuger{
+  animation-delay: .32s;
+  animation-duration: 2s;
 }
 
 @keyframes hero-cta{
@@ -679,3 +693,22 @@ footer p {
   }
 }
 /* End of hero page content */
+
+
+/* Rest of sections */
+
+.anim {
+  opacity: 0;
+}
+
+@keyframes gen_anim{
+  from {
+    transform: translateX(-100px);
+    opacity: 0;
+  }
+
+  to{
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
