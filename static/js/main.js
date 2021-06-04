@@ -9,7 +9,7 @@ const options = {
 const general_observer = new IntersectionObserver((entries, general_observer)=>{
     entries.forEach(entry =>{
         if (entry.isIntersecting){
-            entry.target.style.animation = 'gen_anim 2s forwards'
+            entry.target.style.animation = 'gen_anim 2s ease-in-out forwards'
         }
     })
 }, options)
