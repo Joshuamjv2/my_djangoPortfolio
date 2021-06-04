@@ -47,12 +47,12 @@ def all_projects(request, tag_name = None):
         print(type(tag))
     paginator = Paginator(project_list, 4)
     page = request.GET.get('page')
-    try:
-        projects  = paginator.page(page)
-    except  PageNotAnInteger:
-        projects = paginator.page(1)
-    except EmptyPage:
-        projects = paginator.page(paginator.num_pages)
+    # try:
+    projects  = paginator.get_page(page)
+    # except  PageNotAnInteger:
+    #     projects = paginator.page(1)
+    # except EmptyPage:
+    #     projects = paginator.page(paginator.num_pages)
     return render(request, 'projects/all_projects.html', {'projects':projects, 'tag':tag})
 
 
