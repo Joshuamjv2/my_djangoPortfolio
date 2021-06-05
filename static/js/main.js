@@ -40,7 +40,7 @@ specials.forEach(special=>{
 const appears_observer = new IntersectionObserver((entries, appears_observe)=>{
     entries.forEach(entry=>{
         if (entry.isIntersecting){
-            entry.target.style.animation = `appear 2s ease-in-out forwards`
+            entry.target.style.animation = `appear 1s ease-in-out forwards`
         }
     })
 }, options)
