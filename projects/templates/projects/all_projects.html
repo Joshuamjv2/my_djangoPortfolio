@@ -14,7 +14,7 @@
         {% endif %}
         <div class="all-work">
             {% for project in projects %}
-                <div class="single-work anim">
+                <div class="single-work anim" data-delay="0s">
                     <div class="work-image">
                         {% if project.image %}
                             <img src="{{project.image.url}}" alt="">
