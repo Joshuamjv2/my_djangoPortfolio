@@ -650,7 +650,7 @@ footer p {
 /* Hero page content */
 .hero-intro, .hero-title, .hero-impression{
   opacity: 0;
-  animation: from-top 2s;
+  animation: from-top 1s;
   animation-fill-mode: forwards;
 }
 
@@ -668,19 +668,24 @@ footer p {
 /* hero page buttons and hambuger menu*/
 .hero-cta, .hambuger, .hambuger::before, .hambuger::after{
   opacity: 0;
-  animation: hero-cta 3s ease-in-out;
+  animation: hero-cta 1.2s ease-in-out;
   animation-delay: .5s;
   animation-fill-mode: forwards;
 }
 
 .hambuger::before{
-  animation-delay: .16s;
-  animation-duration: 1s;
+  animation-delay: 80ms;
+  animation-duration: 250ms;
 }
 
 .hambuger{
-  animation-delay: .32s;
-  animation-duration: 2s;
+  animation-delay: 160ms;
+  animation-duration: 500ms;
+}
+
+.hambuger::after{
+  animation-delay: 320ms;
+  animation-duration: 750ms;
 }
 
 @keyframes hero-cta{
@@ -696,7 +701,7 @@ footer p {
 
 
 /* Rest of sections */
-
+/* each work */
 .anim {
   opacity: 0;
 }
@@ -709,6 +714,21 @@ footer p {
 
   to{
     transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+/* tiny buttons and bits */
+
+.special-bits{
+  opacity: 0;
+}
+
+@keyframes specials{
+  from {
+    opacity: 0;
+  }
+  to{
     opacity: 1;
   }
 }
