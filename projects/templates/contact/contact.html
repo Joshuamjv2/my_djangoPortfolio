@@ -8,7 +8,7 @@
 
         <div class="contact_info-wrapper">
 
-            <div class="contact-info__text">
+            <div class="contact-info__text anim" data-delay="0s">
 
 
 
@@ -52,7 +52,7 @@
 
             </div>
 
-            <form action="" class="contact-info__form" method="POST" novalidate>
+            <form action="" class="contact-info__form special-bits" method="POST" novalidate data-delay="200ms">
                 {% csrf_token %}
                 {% for field in form %}
                     <div class="form-item">
@@ -60,7 +60,7 @@
                         {{field.errors}}
                     </div>
                 {% endfor %}
-                <input type="submit" value="send" id="contact-submit" class="btn">
+                <input type="submit" value="send" id="contact-submit" class="btn appears" data-delay="0.6s">
             </form>
         </div>
     </div>

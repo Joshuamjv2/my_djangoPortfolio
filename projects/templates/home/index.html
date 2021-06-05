@@ -23,7 +23,7 @@
             <h1 class="section-title special-bits" data-delay="0s">My Work</h1>
             <div class="all-work">
                 {% for project in projects %}
-                    <div class="single-work anim">
+                    <div class="single-work anim" data-delay="0s">
                         <div class="work-image">
                             {% if project.image %}
                                 <img src="{{project.image.url}}" alt="">
@@ -59,7 +59,7 @@
                 <!-- <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Non pariatur perspiciatis velit quibusdam odit officia, animi cum cumque eaque quam magni deleniti est minus dolor architecto ex esse, expedita fugit.
                 </p> -->
                 <ul>
-                    <li class="btn appears">
+                    <li class="btn appears" data-delay="0s">
                         <a href="{%url 'all-projects'%}">See All Projects</a>
                     </li>
                 </ul>
@@ -73,11 +73,11 @@
             <!-- <div class="about-text"> -->
                 <h3 class="section-title special-bits" data-delay="0s">About Me</h3>
                 <div class="about-content">
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus dolorum illo quod earum officiis excepturi veniam, velit ea quis commodi, quidem Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ipsa, delectus? <span class="big-dev"><br>odio mollitia vel aliquam!s adipisicing elit. Perferendis, rem eum consequaturLorem ipsum dolor sit amet consectetur dolor quae nobis dignissimos animi minus dolorem consequuntur ullam amet officiis</span>
+                    <p class="anim" data-delay='0s'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus dolorum illo quod earum officiis excepturi veniam, velit ea quis commodi, quidem Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ipsa, delectus? <span class="big-dev"><br>odio mollitia vel aliquam!s adipisicing elit. Perferendis, rem eum consequaturLorem ipsum dolor sit amet consectetur dolor quae nobis dignissimos animi minus dolorem consequuntur ullam amet officiis</span>
                     </p>
                                 <!-- </div> -->
-                    <div class="about-img"><img src="{% static 'images/website.jpg'%}" alt="Image of Joshua" width=""></div>
-                    <p class="small-dev">Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis, rem eum consequatur dolor et provident voluptatum quae nobis dignissimos animi minus dolorem consequuntur ullam amet officiis illum omnivoluptatem vel.</p>
+                    <div class="about-img anim" data-delay="200ms"><img src="{% static 'images/website.jpg'%}" alt="Image of Joshua" width=""></div>
+                    <p class="small-dev anim" data-delay="0s">Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis, rem eum consequatur dolor et provident voluptatum quae nobis dignissimos animi minus dolorem consequuntur ullam amet officiis illum omnivoluptatem vel.</p>
                 </div>
                 <!-- <p class="resume special">See my resume</p> -->
         </div>

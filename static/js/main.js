@@ -3,14 +3,14 @@ const specials = document.querySelectorAll('.special-bits');
 const appear_btns = document.querySelectorAll('.appears')
 const options = {
     root: null,
-    threshold: .5,
+    threshold: 0.5,
     rootMargin: "0px"
 }
 
 const general_observer = new IntersectionObserver((entries, general_observer)=>{
     entries.forEach(entry =>{
         if (entry.isIntersecting){
-            entry.target.style.animation = `gen_anim 1s ease-in-out forwards`
+            entry.target.style.animation = `gen_anim 1s ${entry.target.dataset.delay}  ease-in-out forwards`
         }
     })
 }, options)
@@ -40,7 +40,7 @@ specials.forEach(special=>{
 const appears_observer = new IntersectionObserver((entries, appears_observe)=>{
     entries.forEach(entry=>{
         if (entry.isIntersecting){
-            entry.target.style.animation = `appear 1s ease-in-out forwards`
+            entry.target.style.animation = `appear 1s ${entry.target.dataset.delay} ease-in-out forwards`
         }
     })
 }, options)
