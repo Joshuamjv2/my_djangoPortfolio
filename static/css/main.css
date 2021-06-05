@@ -734,3 +734,16 @@ footer p {
     transform: translateY(0)
   }
 }
+
+.appears{
+  opacity: 0;
+}
+
+@keyframes appear{
+  from{
+    opacity: 0;
+  }
+  to{
+    opacity: 1;
+  }
+}

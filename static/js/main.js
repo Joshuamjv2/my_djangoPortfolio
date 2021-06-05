@@ -1,5 +1,6 @@
 const general = document.querySelectorAll('.anim');
 const specials = document.querySelectorAll('.special-bits');
+const appear_btns = document.querySelectorAll('.appears')
 const options = {
     root: null,
     threshold: .5,
@@ -34,4 +35,16 @@ const bits_observer = new IntersectionObserver((entries, bits_observer)=>{
 
 specials.forEach(special=>{
     bits_observer.observe(special)
+})
+
+const appears_observer = new IntersectionObserver((entries, appears_observe)=>{
+    entries.forEach(entry=>{
+        if (entry.isIntersecting){
+            entry.target.style.animation = `appear 2s ease-in-out forwards`
+        }
+    })
+}, options)
+
+appear_btns.forEach(appear=>{
+    appears_observer.observe(appear)
 })
