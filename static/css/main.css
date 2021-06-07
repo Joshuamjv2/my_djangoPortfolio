@@ -453,7 +453,7 @@ footer p {
 /* end footer */
 
 /* Responsiveness in order */
-@media (max-width: 369px){
+@media (max-width: 355px){
   .hambuger-main{
     /* color: rgb(3, 3, 2); */
     /* background-color: yellow; */
