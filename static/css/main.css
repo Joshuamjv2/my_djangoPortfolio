@@ -88,6 +88,8 @@ header {
   padding: 3rem 0 0 0;
   margin: 0 auto;
   width: 80%;
+  /* background-color: yellow; */
+  flex-wrap: wrap;
 }
 
 .nav_items {
@@ -96,30 +98,50 @@ header {
   font-size: 1.1rem;
   background-color: #E04031;
   text-transform: capitalize;
+  height: 100%;
+  flex-direction: column;
+  /* position:absolute; */
+  margin-right: calc(3rem + 1px);
+  /* margin-right: -2000px; */
 }
 
 
 .nav_items li{
-  padding: 1rem;
+  padding: 1rem 1.2rem;
 }
 
+.nav_item + .nav_item{
+  border-top: 1px white solid;
+}
+
+.hambuger-main{
+  position: absolute;
+  padding: 1rem .5rem;
+  /* background-color: blue; */
+  /* background-color:#E04031; */
+  /* border-left: 1px solid #fff; */
+  top: 0;
+  right: 0;
+}
 
 
 .hambuger {
   position: relative;
 }
 
+
 .hambuger,
 .hambuger::before,
 .hambuger::after {
   content: "";
   height: 3px;
-  width: 2rem;
+  width: 1.5rem;
   background-color: #333333;
   background: #E04031;
 
   /* transition: all 300ms ease-in-out; */
 }
+
 
 .hambuger::before, .hambuger::after {
   position: absolute;
@@ -139,6 +161,9 @@ header {
 }
 
 .logo {
+  position:relative;
+  display: block;
+  margin-top: 0px;
   font-weight: 700;
   font-size: 1.6rem;
 }
@@ -428,6 +453,12 @@ footer p {
 /* end footer */
 
 /* Responsiveness in order */
+@media (max-width: 369px){
+  .hambuger-main{
+    padding: 1rem 0;
+  }
+}
+
 
 @media (min-width: 600px) {
   .container {
@@ -469,7 +500,34 @@ footer p {
     margin-bottom: 2rem;
   }
 
-  
+  /* Navigation */
+  .hambuger, .hambuger::after, .hambuger::before {
+    /* display: none; */
+    background-color: #fff;
+    width: 2rem;
+    /* background-color: #E04031; */
+    /* position: relative; */
+    /* top: 9px; */
+    /* background-color: white; */
+  }
+
+  .hambuger-main{
+    padding: 1rem .5rem;
+    background-color:#E04031;
+  }
+
+  .nav_items{
+    display: flex;
+    opacity: 0;
+  }
+
+  .navigation {
+    padding: 0;
+    width: 100%;
+  }
+
+/* End navigation */
+}
 
   /* About section */
   .about-content {
@@ -541,23 +599,8 @@ footer p {
     font-size: 1.3rem;
   }
 
-  /* Navigation */
-  .hambuger {
-    display: none;
-    position: relative;
-  }
 
-  .nav_items{
-    display: flex;
-  }
-
-  .navigation {
-    padding: 0;
-    width: 100%;
-  }
-
-/* End navigation */
-}
+  
 
 /* Width 1100+ */
 
