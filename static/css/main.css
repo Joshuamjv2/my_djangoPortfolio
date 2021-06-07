@@ -466,6 +466,10 @@ footer p {
   .container {
     width: 60%;
   }
+
+  .hambuger, .hambuger::after, .hambuger::before {
+    width: 2rem;
+  }
 }
 
 
@@ -504,15 +508,9 @@ footer p {
 
     /* Navigation */
     .hambuger, .hambuger::after, .hambuger::before {
-      /* display: none; */
       background-color: #fff;
-      width: 2rem;
-      /* background-color: #E04031; */
-      /* position: relative; */
-      /* top: 9px; */
-      /* background-color: white; */
     }
-  
+
     .hambuger-main{
       /* position: absolute; */
       padding: 1rem .5rem;
