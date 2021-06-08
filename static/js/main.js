@@ -1,8 +1,8 @@
 const general = document.querySelectorAll('.anim');
 const specials = document.querySelectorAll('.special-bits');
-const appear_btns = document.querySelectorAll('.appears')
-const hambuger = document.querySelector('.hambuger-main').addEventListener('click', activate)
-const nav_list = document.querySelector('.nav_items')
+const appear_btns = document.querySelectorAll('.appears');
+const hambuger = document.querySelector('.hambuger-main').addEventListener('click', activate);
+const nav_list = document.querySelector('.nav_items');
 const options = {
     root: null,
     threshold: 0.5,
@@ -12,9 +12,10 @@ const options = {
 // Navigation animation on clicking hambuger
 function activate(e){
     e.preventDefault;
-    nav_list.classList.toggle('active')
+    nav_list.classList.toggle('active');
 }
 
+// activate();
 
 const general_observer = new IntersectionObserver((entries, general_observer)=>{
     entries.forEach(entry =>{
@@ -49,11 +50,11 @@ specials.forEach(special=>{
 const appears_observer = new IntersectionObserver((entries, appears_observe)=>{
     entries.forEach(entry=>{
         if (entry.isIntersecting){
-            entry.target.style.animation = `appear 1s ${entry.target.dataset.delay} ease-in-out forwards`
+            entry.target.style.animation = `appears 1s ${entry.target.dataset.delay} ease-in-out forwards`
         }
     })
 }, options)
 
-// appear_btns.forEach(appear=>{
-//     appears_observer.observe(appear)
-// })
+appear_btns.forEach(appear=>{
+    appears_observer.observe(appear)
+})
