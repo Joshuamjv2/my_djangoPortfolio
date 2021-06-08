@@ -79,9 +79,9 @@ header {
 
 .nav_items {
   opacity: 0;
-  color: #fff;
+  background-color: #fff;
   font-size: 1.1rem;
-  background-color: #E04031;
+  /* background-color: #E04031; */
   text-transform: capitalize;
   height: 100%;
   flex-direction: column;
@@ -93,6 +93,8 @@ header {
 
 .nav_items li{
   padding: 1rem 1.2rem;
+  background-color:#E04031;
+  color: #fff;
 }
 
 .nav_item + .nav_item{
@@ -471,6 +473,8 @@ footer p {
 
   .active .nav_item{
     opacity: 0;
+    background-color: unset;
+    color: #E04031;
     /* transform: translateY(-100px); */
     font-size: 1.8rem;
     font-weight:600;
@@ -492,13 +496,8 @@ footer p {
   }
 
   .nav_item + .nav_item{
-    border-top: unset;
-    /* margin-top */
+    border-top: unset;c
   }
-
-  /* .logo{
-    opacity: 1;
-  } */
 }
 
 
