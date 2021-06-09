@@ -9,7 +9,13 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="{% static '/css/main.css' %}">
     <link rel="stylesheet" href="{% static '/css/extra_pages.css'%}">
-    <title>Document</title>
+    <title>
+        {% if title %}
+        Muwanguzi Joshua - {{title}}
+        {% else %}
+        Muwanguzi Joshua - Home
+        {% endif %}
+    </title>
 </head>
 <body>
     <header>
@@ -19,10 +25,10 @@
                 </ul>
             <ul class="nav_items">
                 <!-- <div class="hambuger"></div> -->
-                <li class="nav_item">home</li>
-                <li class="nav_item">about</li>
-                <li class="nav_item">contact</li>
-                <li class="nav_item">resume</li>
+                <li class="nav_item"><a href="{% url 'home'%}">Home</a></li>
+                <li class="nav_item"><a href="{% url 'all-projects'%}">Portfolio</a></li>
+                <li class="nav_item"><a href="{% url 'contact'%}">Contact</a></li>
+                <li class="nav_item"><a href="#">Resume</a></li>
             </ul>
             <div class="hambuger-main">
                 <div class="hambuger"></div>

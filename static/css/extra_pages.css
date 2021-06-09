@@ -16,10 +16,9 @@
 
 .return-to-all{
     color: #404044;
+    opacity: 0;
     position: relative;
-    /* z-index: 29; */
-    /* margin-top: -2rem; */
-    /* z-index: 15; */
+    animation: hero-cta 2s forwards;
 }
 
 .return-to-all a{

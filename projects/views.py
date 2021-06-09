@@ -35,7 +35,7 @@ def home(request):
     #     if 'submitted' in request.GET:
     #             submitted = True
     # return render(request, 'home/index.html', {'form':form, 'submitted':submitted,'projects':projects})
-    return render(request, 'home/index.html', {'projects':projects})
+    return render(request, 'home/index.html', {'projects':projects, 'title':'Home'})
 
 
 def all_projects(request, tag_name = None):
@@ -53,7 +53,7 @@ def all_projects(request, tag_name = None):
     #     projects = paginator.page(1)
     # except EmptyPage:
     #     projects = paginator.page(paginator.num_pages)
-    return render(request, 'projects/all_projects.html', {'projects':projects, 'tag':tag})
+    return render(request, 'projects/all_projects.html', {'projects':projects, 'tag':tag, 'title':'All Projects'})
 
 
 def contact(request):
@@ -85,4 +85,4 @@ def contact(request):
         form = ContactForm()
         if 'submitted' in request.GET:
                 submitted = True
-    return render(request, 'contact/contact.html', {'form':form, 'submitted':submitted})
+    return render(request, 'contact/contact.html', {'form':form, 'submitted':submitted, 'title':'Contact Me'})

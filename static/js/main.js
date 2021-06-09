@@ -3,16 +3,26 @@ const specials = document.querySelectorAll('.special-bits');
 const appear_btns = document.querySelectorAll('.appears');
 const hambuger = document.querySelector('.hambuger-main').addEventListener('click', activate);
 const nav_list = document.querySelector('.nav_items');
+const about_btn = document.getElementById('#about').addEventListener('click', showAbout);
+const about_section = document.getElementById('#about-section');
 const options = {
     root: null,
     threshold: 0.5,
     rootMargin: "0px"
 }
 
+
 // Navigation animation on clicking hambuger
 function activate(e){
     e.preventDefault;
     nav_list.classList.toggle('active');
+}
+
+// Show in-page about section
+function showAbout(e){
+    // e.preventDefault();
+    nav_list.classList.remove('active');
+
 }
 
 // activate();
@@ -31,7 +41,7 @@ general.forEach(anim=>{
 
 const sp_options = {
     root: null,
-    threshold: .6,
+    threshold: 0.6,
     rootMargin: "0px"
 }
 
