@@ -31,7 +31,7 @@ general.forEach(anim=>{
 
 const sp_options = {
     root: null,
-    threshold: 1,
+    threshold: .6,
     rootMargin: "0px"
 }
 

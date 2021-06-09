@@ -195,6 +195,7 @@ header {
   color: #333333;
   font-size: 1.7rem;
   position: relative;
+  text-transform: capitalize;
 }
 
 .section-title::after {

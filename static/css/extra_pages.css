@@ -1,9 +1,21 @@
 .extra-page{
-    background: #E04031;
-    height: 40vh;
+    /* background: #E04031; */
+    height: 30vh;
+    box-shadow: 0 15px 20px -25px;
 }
 
 .extra-page h1{
     color: #E04031;
-    color: #fff;
+    /* color: #fff; */
+    padding-bottom: 0;
+}
+
+.hero-title{
+    text-transform: capitalize;
+}
+
+.return-to-all{
+    color: #404044;
+    /* margin-top: -2rem; */
+    /* z-index: 15; */
 }
