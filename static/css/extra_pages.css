@@ -16,6 +16,12 @@
 
 .return-to-all{
     color: #404044;
+    position: relative;
+    z-index: 29;
     /* margin-top: -2rem; */
     /* z-index: 15; */
+}
+
+.return-to-all a{
+    color: #E04031;
 }

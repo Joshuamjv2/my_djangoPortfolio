@@ -6,9 +6,11 @@
 <section class="main extra-page" id="home-section">
     <div class="container hero">
         {% if tag %}
-        <h1 class="hero-title">projects with<span style="text-transform: none; color:#404040"> "{{tag}}"</span></h1>
-        <p class="return-to-all">Return to <span style="color: #E04031;">
-            <a href="{%url 'all-projects'%}">all?</a></span>
+        <h1 class="hero-title">projects with
+            <span style="text-transform: none; color:#404040"> "{{tag}}"</span>
+        </h1>
+        <p class="return-to-all">Return to 
+            <a href="{%url 'all-projects'%}">all?</a>
         </p>
         {% else %}
         <h1 class="hero-title">All projects</h1>
