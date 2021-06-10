@@ -138,16 +138,15 @@ header {
 
 .hambuger-main.open .hambuger::after, .hambuger-main.open .hambuger::before{
   background:#fff;
+  transition-duration: .4s;
 }
 
 .hambuger-main.open .hambuger::before{
   transform: rotate(-45deg) translate(-6px, 6px);
-  transition-duration: .5s;
 }
 
 .hambuger-main.open .hambuger::after{
   transform: rotate(45deg) translate(-6px, -6px);
-  transition-duration: .5s;
 }
 
 .hambuger::before, .hambuger::after {
@@ -165,7 +164,7 @@ header {
 /* When hambugger is toggled */
 
 .active{
-  animation: hero-cta 500ms ease-in-out 0s forwards;
+  animation: hero-cta 800ms ease-in-out 0s forwards;
   opacity: 0;
   }
 
