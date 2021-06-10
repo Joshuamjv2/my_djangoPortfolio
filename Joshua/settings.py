@@ -11,15 +11,19 @@ https://docs.djangoproject.com/en/3.2/ref/settings/
 """
 
 from pathlib import Path
-# from decouple import env, Csv
+from dotenv import load_dotenv
+# from decouple import os.environ.get, Csv
 import os
-import environ
+# import environ
 import django_heroku
+load_dotenv()
 
-env = environ.Env(DEBUG=(bool, False))
-environ.Env.read_env()
+# os.environ.get = environ.Env(DEBUG=(bool, False))
+# environ.Env.read_env()
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
+# BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+
 
 
 # Quick-start development settings - unsuitable for production
@@ -31,11 +35,11 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = env('DEBUG')
+DEBUG = os.environ.get('DEBUG')
 
 ALLOWED_HOSTS = ['muwanguzi-joshua.herokuapp.com']
 
-SECRET_KEY = env.str('SECRET_KEY', 'my-django-unsafe-key')
+SECRET_KEY = os.environ.get('SECRET_KEY')
 
 
 # Application definition
@@ -109,13 +113,13 @@ DATABASES = {
 #AWS3 BUCKETS CONFIG
 AWS_QUERYSTRING_AUTH = False
 # DEFAULT_FILE_STORAGE = 'storages.backends.s3boto3.S3Boto3Storage'
-DEFAULT_FILE_STORAGE = env('DEFAULT_FILE_STORAGE')
+DEFAULT_FILE_STORAGE = os.environ.get('DEFAULT_FILE_STORAGE')
 # AWS_ACCESS_KEY_ID = 'AKIA5NN4DW6NPQVH3AGZ'
-AWS_ACCESS_KEY_ID = env('AWS_ACCESS_KEY_ID')
+AWS_ACCESS_KEY_ID = os.environ.get('AWS_ACCESS_KEY_ID')
 # AWS_SECRET_ACCESS_KEY = 'grhCiSkxYEvN3IOtCWvpBq5OsrnVlEsIAbIAlAkK'
-AWS_SECRET_ACCESS_KEY = env('AWS_SECRET_ACCESS_KEY')
+AWS_SECRET_ACCESS_KEY = os.environ.get('AWS_SECRET_ACCESS_KEY')
 # AWS_STORAGE_BUCKET_NAME = 'mjv-256-portfolio'
-AWS_STORAGE_BUCKET_NAME = env('AWS_STORAGE_BUCKET_NAME')
+AWS_STORAGE_BUCKET_NAME = os.environ.get('AWS_STORAGE_BUCKET_NAME')
 
 
 #AWS_S3_FILE_OVERWRITE = ''
