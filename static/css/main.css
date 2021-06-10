@@ -141,11 +141,13 @@ header {
 }
 
 .hambuger-main.open .hambuger::before{
-  transform: rotate(45deg) translate(6px, 6px);
+  transform: rotate(-45deg) translate(-6px, 6px);
+  transition-duration: .5s;
 }
 
 .hambuger-main.open .hambuger::after{
-  transform: rotate(-45deg) translate(6px, -6px);
+  transform: rotate(45deg) translate(-6px, -6px);
+  transition-duration: .5s;
 }
 
 .hambuger::before, .hambuger::after {
