@@ -35,7 +35,7 @@ DEBUG = env('DEBUG')
 
 ALLOWED_HOSTS = ['muwanguzi-joshua.herokuapp.com']
 
-SECRET_KEY = "e52da42371d0b34b14aa8063c7d617bcc3536d35f259a9db97fd4291466f3de1"
+SECRET_KEY = env.str('SECRET_KEY', 'my-django-unsafe-key')
 
 
 # Application definition
