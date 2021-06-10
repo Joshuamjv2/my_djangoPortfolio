@@ -8,12 +8,11 @@ https://docs.djangoproject.com/en/3.2/ref/settings/
 """
 
 from pathlib import Path
-import dotenv
+# import dotenvZ
 from dotenv import load_dotenv
-load_dotenv()
-# from decouple import config
 import os
 import django_heroku
+load_dotenv()
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 
