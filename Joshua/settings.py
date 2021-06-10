@@ -8,6 +8,9 @@ https://docs.djangoproject.com/en/3.2/ref/settings/
 """
 
 from pathlib import Path
+import dotenv
+from dotenv import load_dotenv
+load_dotenv()
 # from decouple import config
 import os
 import django_heroku
@@ -20,7 +23,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 
 # SECURITY WARNING: keep the secret key used in production secret!
 # SECRET_KEY = config('SECRET_KEY')
-SECRET_KEY = 'django-insecure-0te^0-v_r6&4#la4s-nor531$-h$p(@=9-afp1(rdbnj8p6zh^'
+SECRET_KEY = os.environ['SECRET_KEY']
 # SECRET_KEY = config('SECRET_KEY')
 
 
