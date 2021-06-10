@@ -31,8 +31,6 @@ i{
   color: #E04031;
 }
 
-
-
 a {
   color: unset;
   text-decoration: none;
@@ -57,11 +55,7 @@ li {
 
 section {
   padding: 50px 0;
-  /* margin-top: 2rem; */
 }
-
-
-
 
 /* Start navigation */
 header {
@@ -82,15 +76,12 @@ header {
   opacity: 0;
   background-color: #fff;
   font-size: 1.1rem;
-  /* background-color: #E04031; */
   text-transform: capitalize;
   height: 100%;
   flex-direction: column;
-  /* position:absolute; */
   position: relative;
   margin-right: calc(3rem + 1px);
 }
-
 
 .nav_items li{
   padding: 1rem 1.2rem;
@@ -111,13 +102,9 @@ header {
   cursor: pointer;
 }
 
-/* .hambuger-main:hover{
-  background-color: blue;
-} */
 .hambuger {
   position: relative;
 }
-
 
 .hambuger,
 .hambuger::before,
@@ -125,13 +112,10 @@ header {
   content: "";
   height: 3px;
   width: 1.5rem;
-  /* background-color: #333333; */
   background: #E04031;
 }
 
 .hambuger-main.open .hambuger{
-  /* transform: translateX(-100px); */
-  /* opacity: 0; */
   background:transparent;
   box-shadow: none;
 }
@@ -162,12 +146,10 @@ header {
 }
 
 /* When hambugger is toggled */
-
 .active{
   animation: hero-cta 800ms ease-in-out 0s forwards;
   opacity: 0;
   }
-
 /* End when hambuger is toggled */
 
 .logo{
@@ -183,13 +165,8 @@ header {
 }
 
 /* End Navigation */
-
-
-
-
 .main {
   background-color: var(--white);
-  /* color: var(--chalk-white); */
   display: flex;
   justify-content: center;
   align-items: center;
@@ -198,8 +175,6 @@ header {
   z-index: 2;
   height: 100vh;
 }
-
-
 
 .special {
   color: black;
@@ -229,9 +204,7 @@ header {
   background-color: #E04031;
   position: absolute;
 }
-
 /* hero starts */
-
 .hero-intro,
 .hero-impression {
   color: #404040;
@@ -240,6 +213,7 @@ header {
 .hero-intro{
   font-size: 1.7rem;
 }
+
 .hero-title {
   padding-bottom: 2rem;
   font-size: 2rem;
@@ -278,14 +252,11 @@ header {
   margin: 1rem 0;
 }
 
-
 /* About end */
-
 .work {
   background-color: var(--white);
   color: #333333;
   position: relative;
-  /* padding-bottom: 0; */
 }
 
 .all-work {
@@ -296,7 +267,6 @@ header {
   background-color: #F2F2F2;
   border-radius: unset;
 }
-
 
 .single-work {
   margin-bottom: 3rem;
@@ -327,7 +297,6 @@ header {
 
 .work-cta li{
   color: black;
-  /* color: #E04031; */
 }
 
 .work-cta .cta {
@@ -349,7 +318,6 @@ header {
   background-color: #333333;
   color: var(--white);
   display: inline-block;
-  /* border-radius: 0.4rem; */
   padding: 0.2rem 0.5rem;
   margin: 0.5rem 0;
   margin-right: 0.4rem;
@@ -367,7 +335,6 @@ header {
 
 
 /* Contact */
-
 .contact_info-wrapper{
   display: flex;
   gap: 2rem;
@@ -387,7 +354,6 @@ header {
   flex-direction: column;
 }
 
-
 .text-info {
   margin-left: 1rem;
 }
@@ -401,8 +367,6 @@ header {
 .icon {
   font-size: 1.6rem;
   margin-top: 0;
-  /* color: #8FB399; */
-  /* padding-top: 0; */
 }
 
 /* contact form */
@@ -411,7 +375,6 @@ header {
   color: #333333;
   font-family: 'Poppins' sans-serif;
   font-size: 1.2rem;
-  /* text-transform: ; */
 }
 
 .form-item {
@@ -452,7 +415,6 @@ footer {
   padding: 3rem 0;
   text-align: center;
 }
-
 
 footer i {
   padding: 0 0.5rem;
@@ -495,7 +457,6 @@ footer p {
     opacity: 0;
     background-color: unset;
     color: #E04031;
-    /* transform: translateY(-100px); */
     font-size: 1.8rem;
     font-weight:600;
     animation: nav-show 500ms ease-in-out 200ms forwards;
@@ -524,7 +485,6 @@ footer p {
     background:#E04031;
   }
 }
-
 
 
 @media (min-width: 600px) {
@@ -577,30 +537,19 @@ footer p {
     }
 
     .hambuger-main{
-      /* position: absolute; */
       padding: 1rem .5rem;
-      /* background-color: blue; */
       background-color:#E04031;
-      /* border-left: 1px solid #fff; */
-      /* top: 0; */
-      /* right: 0; */
     }
 
     .nav_items{
       display: flex;
       color: #fff;
-      /* opacity: 0; */
-      /* margin-right: 1px; */
-      /* margin-top: ; */
-      /* transform: translateY(-1000px); */
     }
 
     .navigation {
       padding: 0;
       width: 100%;
     }
-
-
   /* End navigation */
 
   /* About section */
@@ -634,7 +583,6 @@ footer p {
   }
 
   /* Work section */
-
   .work-detail {
     display: unset;
   }
@@ -659,6 +607,7 @@ footer p {
   .contact .container{
     position: relative;
   }
+
   #contact-submit{
     position: absolute;
     right: 0;
@@ -672,13 +621,9 @@ footer p {
   footer {
     font-size: 1.3rem;
   }
-
-
-
 }
 
 /* Width 1100+ */
-
 @media (min-width: 1100px) {
   .intro-text p {
     font-size: 1.3rem;
@@ -696,7 +641,6 @@ footer p {
   }
 
   /* work section */
-
   .single-work {
     display: flex;
     padding: 2rem;
@@ -730,7 +674,6 @@ footer p {
   .tags {
     margin-bottom: 0.5rem;
   }
-
   /* end of work section */
 }
 
@@ -776,8 +719,8 @@ footer p {
 
   .work-text h3 {
     font-size: 1.6rem;
-    /* font-weight: 700; */
   }
+
   .work-text p {
     line-height: 1.4;
     font-size: 1.1rem;
@@ -876,7 +819,6 @@ footer p {
 }
 
 /* tiny buttons and bits */
-
 .special-bits{
   opacity: 0;
 }
@@ -904,5 +846,4 @@ footer p {
     opacity: 1;
   }
 }
-
 /* Separate Contact and All works Pages */
