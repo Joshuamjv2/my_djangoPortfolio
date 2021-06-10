@@ -11,7 +11,7 @@ https://docs.djangoproject.com/en/3.2/ref/settings/
 """
 
 from pathlib import Path
-from decouple import config
+# from decouple import config
 import os
 import django_heroku
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
@@ -82,35 +82,35 @@ WSGI_APPLICATION = 'Joshua.wsgi.application'
 # https://docs.djangoproject.com/en/3.2/ref/settings/#databases
 
 DATABASES = {
-    # 'default': {
-    #     'ENGINE': 'django.db.backends.postgresql',
-    #     'NAME': 'my_django_portfolio',
-    #     'USER': 'postgres',
-    #     'PASSWORD':'josh256',
-    #     'HOST': 'localhost',
-    #     'PORT': '5432'
-    # },
-    'default':{
+    'default': {
         'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'd45dpqglgtfetn',
-        'USER': 'nodgpveypmwjuj',
-        'PASSWORD':'63b0ecdc1f4f6683c2d8805384a90e6361ef8616879a49cf5628f9dddb49b534',
-        'HOST': 'ec2-54-227-246-76.compute-1.amazonaws.com',
+        'NAME': 'my_django_portfolio',
+        'USER': 'postgres',
+        'PASSWORD':'josh256',
+        'HOST': 'localhost',
         'PORT': '5432'
-    }
+    },
+    # 'production':{
+    #     'ENGINE': 'django.db.backends.postgresql',
+    #     'NAME': 'd45dpqglgtfetn',
+    #     'USER': 'nodgpveypmwjuj',
+    #     'PASSWORD':'63b0ecdc1f4f6683c2d8805384a90e6361ef8616879a49cf5628f9dddb49b534',
+    #     'HOST': 'ec2-54-227-246-76.compute-1.amazonaws.com',
+    #     'PORT': '5432'
+    # }
 }
 
 
 #AWS3 BUCKETS CONFIG
 AWS_QUERYSTRING_AUTH = False
-# DEFAULT_FILE_STORAGE = 'storages.backends.s3boto3.S3Boto3Storage'
-DEFAULT_FILE_STORAGE = config('DEFAULT_FILE_STORAGE')
-# AWS_ACCESS_KEY_ID = 'AKIA5NN4DW6NPQVH3AGZ'
-AWS_ACCESS_KEY_ID = config('AWS_ACCESS_KEY_ID')
-# AWS_SECRET_ACCESS_KEY = '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'
-AWS_SECRET_ACCESS_KEY = config('AWS_SECRET_ACCESS_KEY')
-# AWS_STORAGE_BUCKET_NAME = 'mjv-256-portfolio'
-AWS_STORAGE_BUCKET_NAME = config('AWS_STORAGE_BUCKET_NAME')
+DEFAULT_FILE_STORAGE = 'storages.backends.s3boto3.S3Boto3Storage'
+# DEFAULT_FILE_STORAGE = config('DEFAULT_FILE_STORAGE')
+AWS_ACCESS_KEY_ID = 'AKIA5NN4DW6NPQVH3AGZ'
+# AWS_ACCESS_KEY_ID = config('AWS_ACCESS_KEY_ID')
+AWS_SECRET_ACCESS_KEY = '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'
+# AWS_SECRET_ACCESS_KEY = config('AWS_SECRET_ACCESS_KEY')
+AWS_STORAGE_BUCKET_NAME = 'mjv-256-portfolio'
+# AWS_STORAGE_BUCKET_NAME = config('AWS_STORAGE_BUCKET_NAME')
 
 
 #AWS_S3_FILE_OVERWRITE = ''
@@ -171,11 +171,8 @@ MEDIA_URL = '/media/'
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 django_heroku.settings(locals())
+EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
 
-EMAIL_BACKEND = config('EMAIL_BACKEND')
-AWS_ACCESS_KEY_ID = config('AWS_ACCESS_KEY_ID')
-AWS_SECRET_ACCESS_KEY = config('AWS_SECRET_ACCESS_KEY')
-AWS_SES_REGION_NAME = config('AWS_SES_REGION_NAME')
-AWS_SES_REGION_ENDPOINT = config('AWS_SES_REGION_ENDPOINT')
+
 
 
