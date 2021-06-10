@@ -8,7 +8,7 @@ https://docs.djangoproject.com/en/3.2/ref/settings/
 """
 
 from pathlib import Path
-# import dotenvZ
+from distutils.util import strtobool
 from dotenv import load_dotenv
 import os
 import django_heroku
@@ -27,7 +27,7 @@ SECRET_KEY = os.environ['SECRET_KEY']
 
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = bool(strtobool(os.environ.get('DEBUG', 'True')))
 
 ALLOWED_HOSTS = ['muwanguzi-joshua.herokuapp.com']
 
