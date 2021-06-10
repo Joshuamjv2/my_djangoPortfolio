@@ -107,9 +107,13 @@ header {
   padding: 1rem .5rem;
   top: 0;
   right: 0;
+  transition: all .5s;
+  cursor: pointer;
 }
 
-
+/* .hambuger-main:hover{
+  background-color: blue;
+} */
 .hambuger {
   position: relative;
 }
@@ -121,12 +125,28 @@ header {
   content: "";
   height: 3px;
   width: 1.5rem;
-  background-color: #333333;
+  /* background-color: #333333; */
   background: #E04031;
-
-  /* transition: all 300ms ease-in-out; */
 }
 
+.hambuger-main.open .hambuger{
+  /* transform: translateX(-100px); */
+  /* opacity: 0; */
+  background:transparent;
+  box-shadow: none;
+}
+
+.hambuger-main.open .hambuger::after, .hambuger-main.open .hambuger::before{
+  background:#fff;
+}
+
+.hambuger-main.open .hambuger::before{
+  transform: rotate(45deg) translate(6px, 6px);
+}
+
+.hambuger-main.open .hambuger::after{
+  transform: rotate(-45deg) translate(6px, -6px);
+}
 
 .hambuger::before, .hambuger::after {
   position: absolute;
@@ -496,6 +516,11 @@ footer p {
 
   .nav_item + .nav_item{
     border-top: unset;
+  }
+
+  /* hambuger color */
+  .hambuger-main.open .hambuger::after, .hambuger-main.open .hambuger::before{
+    background:#E04031;
   }
 }
 

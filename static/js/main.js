@@ -1,21 +1,25 @@
 const general = document.querySelectorAll('.anim');
 const specials = document.querySelectorAll('.special-bits');
 const appear_btns = document.querySelectorAll('.appears');
-const hambuger = document.querySelector('.hambuger-main').addEventListener('click', activate);
+const hambuger = document.querySelector('.hambuger-main');
 const nav_list = document.querySelector('.nav_items');
+
+const openMenu = false;
+
 const options = {
     root: null,
     threshold: 0.5,
     rootMargin: "0px"
-}
+};
 
 
 // Navigation animation on clicking hambuger
+hambuger.addEventListener('click', activate);
 function activate(e){
     e.preventDefault;
     nav_list.classList.toggle('active');
+    hambuger.classList.toggle('open');
 }
-
 
 // activate();
 
