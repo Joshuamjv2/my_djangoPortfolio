@@ -11,7 +11,7 @@ https://docs.djangoproject.com/en/3.2/ref/settings/
 """
 
 from pathlib import Path
-# from decouple import config
+from decouple import config
 import os
 import django_heroku
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
@@ -103,14 +103,14 @@ DATABASES = {
 
 #AWS3 BUCKETS CONFIG
 AWS_QUERYSTRING_AUTH = False
-DEFAULT_FILE_STORAGE = 'storages.backends.s3boto3.S3Boto3Storage'
-# DEFAULT_FILE_STORAGE = config('DEFAULT_FILE_STORAGE')
-AWS_ACCESS_KEY_ID = 'AKIA5NN4DW6NPQVH3AGZ'
-# AWS_ACCESS_KEY_ID = config('AWS_ACCESS_KEY_ID')
-AWS_SECRET_ACCESS_KEY = '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'
-# AWS_SECRET_ACCESS_KEY = config('AWS_SECRET_ACCESS_KEY')
-AWS_STORAGE_BUCKET_NAME = 'mjv-256-portfolio'
-# AWS_STORAGE_BUCKET_NAME = config('AWS_STORAGE_BUCKET_NAME')
+# DEFAULT_FILE_STORAGE = 'storages.backends.s3boto3.S3Boto3Storage'
+DEFAULT_FILE_STORAGE = config('DEFAULT_FILE_STORAGE')
+# AWS_ACCESS_KEY_ID = 'AKIA5NN4DW6NPQVH3AGZ'
+AWS_ACCESS_KEY_ID = config('AWS_ACCESS_KEY_ID')
+# AWS_SECRET_ACCESS_KEY = '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'
+AWS_SECRET_ACCESS_KEY = config('AWS_SECRET_ACCESS_KEY')
+# AWS_STORAGE_BUCKET_NAME = 'mjv-256-portfolio'
+AWS_STORAGE_BUCKET_NAME = config('AWS_STORAGE_BUCKET_NAME')
 
 
 #AWS_S3_FILE_OVERWRITE = ''
