@@ -6,11 +6,7 @@
 
 .extra-page h1{
     color: #E04031;
-    /* color: #fff; */
     padding-bottom: 0;
-}
-
-.hero-title{
     text-transform: capitalize;
 }
 
