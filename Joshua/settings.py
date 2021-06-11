@@ -74,7 +74,7 @@ TEMPLATES = [
     },
 ]
 
-WSGI_APPLICATION = 'Joshua.wsgi.application'
+WSGI_APPLICATION = 'Joshua.wsgi.application' 
 
 
 # Database
@@ -84,7 +84,7 @@ DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
         'NAME': 'my_django_portfolio',
-        'USER': 'postgres',
+        'USER': os.environ['USER'],
         'PASSWORD':'josh256',
         'HOST': 'localhost',
         'PORT': '5432'
