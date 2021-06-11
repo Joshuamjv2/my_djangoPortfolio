@@ -160,7 +160,22 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 django_heroku.settings(locals())
 
-EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
+# EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
+EMAIL_BACKEND = os.environ['EMAIL_BACKEND']
+AWS_ACCESS_KEY_ID = os.environ['AWS_ACCESS_KEY_ID']
+AWS_SECRET_ACCESS_KEY = os.environ['AWS_SECRET_ACCESS_KEY']
+AWS_SES_REGION_NAME = os.environ['AWS_SES_REGION_NAME']
+AWS_SES_REGION_ENDPOINT = os.environ['AWS_SES_REGION_ENDPOINT']
+
+
+
+
+
+
+
+
+
+
 
 LOGGING = {
     'version': 1,
