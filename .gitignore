@@ -1,3 +1,4 @@
 __pycahche__/
 *.os
 .env
+*.log
