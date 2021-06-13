@@ -4,8 +4,6 @@ const appear_btns = document.querySelectorAll('.appears');
 const hambuger = document.querySelector('.hambuger-main');
 const nav_list = document.querySelector('.nav_items');
 
-const openMenu = false;
-
 const options = {
     root: null,
     threshold: 0.5,
@@ -21,8 +19,8 @@ function activate(e){
     hambuger.classList.toggle('open');
 }
 
-// activate();
 
+// activate();
 const general_observer = new IntersectionObserver((entries, general_observer)=>{
     entries.forEach(entry =>{
         if (entry.isIntersecting){
