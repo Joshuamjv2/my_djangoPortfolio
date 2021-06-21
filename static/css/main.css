@@ -476,7 +476,22 @@ footer p {
     }
   }
 
+  .show{
+    animation: gen_anim-up 300ms 0ms ease-in forwards;
+  }
+
+  @keyframes gen_anim-up{
+    from {
+      transform: translateY(100px);
+      opacity: 0;
+    }
   
+    to{
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }
+
   .nav_item + .nav_item{
     border-top: unset;
   }
@@ -500,9 +515,9 @@ footer p {
 
 
 @media (min-width: 900px) {
-
+  
   .show{
-    animation: gen_anim 1s 400ms ease-in-out forwards;
+    animation: gen_anim 300ms 0ms ease-in forwards;
   }
   
   @keyframes gen_anim{
@@ -516,6 +531,7 @@ footer p {
       opacity: 1;
     }
   }
+
 
   h1,
   h3 {
@@ -849,23 +865,6 @@ footer p {
 .appears{
   opacity: 0;
 }
-
-.show{
-  animation: gen_anim-up 1s 400ms ease-in-out forwards;
-}
-
-@keyframes gen_anim-up{
-  from {
-    transform: translateY(100px);
-    opacity: 0;
-  }
-
-  to{
-    transform: translateY(0);
-    opacity: 1;
-  }
-}
-
 
 @keyframes appears{
   from{
