@@ -44,7 +44,7 @@ const sp_options = {
 const bits_observer = new IntersectionObserver((entries, bits_observer)=>{
     entries.forEach(entry=>{
         if (entry.isIntersecting){
-            entry.target.style.animation = `specials 500ms ${entry.target.dataset.delay} ease-in-out forwards`
+            entry.target.style.animation = `specials 500ms ${entry.target.dataset.delay} ease-out forwards`
         }
     })
 }, sp_options)
@@ -56,7 +56,7 @@ specials.forEach(special=>{
 const appears_observer = new IntersectionObserver((entries, appears_observe)=>{
     entries.forEach(entry=>{
         if (entry.isIntersecting){
-            entry.target.style.animation = `appears 1s ${entry.target.dataset.delay} ease-in-out forwards`
+            entry.target.style.animation = `appears 1s ${entry.target.dataset.delay} ease-out forwards`
         }
     })
 }, options)
