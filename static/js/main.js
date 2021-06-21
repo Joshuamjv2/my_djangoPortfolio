@@ -6,7 +6,7 @@ const nav_list = document.querySelector('.nav_items');
 
 const options = {
     root: null,
-    threshold: 0.1,
+    threshold: 0.4,
     rootMargin: "0px"
 };
 
