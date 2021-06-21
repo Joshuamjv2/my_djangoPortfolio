@@ -477,7 +477,7 @@ footer p {
   }
 
   .show{
-    animation: gen_anim-up 1s 0ms ease-in forwards;
+    animation: gen_anim-up 1s 0ms ease-out forwards;
   }
 
   @keyframes gen_anim-up{
@@ -492,9 +492,6 @@ footer p {
     }
   }
 
-  .show.about-img{
-    animation-delay: 100ms;
-  }
 
   .nav_item + .nav_item{
     border-top: unset;
@@ -521,7 +518,7 @@ footer p {
 @media (min-width: 900px) {
   
   .show{
-    animation: gen_anim 1s 0ms ease-in forwards;
+    animation: gen_anim 1s 0ms ease-out forwards;
   }
   
   @keyframes gen_anim{
@@ -536,6 +533,9 @@ footer p {
     }
   }
 
+  .show.about-img{
+    animation-delay: 100ms;
+  }
 
   h1,
   h3 {
