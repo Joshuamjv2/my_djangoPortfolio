@@ -826,21 +826,7 @@ footer p {
   opacity: 0;
 }
 
-.show{
-  animation: gen_anim 1s 400ms ease-in-out forwards;
-}
 
-@keyframes gen_anim{
-  from {
-    transform: translateX(-100px);
-    opacity: 0;
-  }
-
-  to{
-    transform: translateX(0);
-    opacity: 1;
-  }
-}
 
 /* tiny buttons and bits */
 .special-bits{
