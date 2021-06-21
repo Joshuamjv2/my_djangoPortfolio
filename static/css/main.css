@@ -818,9 +818,13 @@ footer p {
   opacity: 0;
 } */
 
+.anim{
+  opacity: 0;
+}
+
 .show{
   animation: gen_anim 1s 400ms ease-in-out forwards;
-  opacity: 0;
+  /* opacity: 0; */
 }
 
 @keyframes gen_anim{
