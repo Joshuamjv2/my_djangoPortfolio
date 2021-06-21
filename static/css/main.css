@@ -818,6 +818,11 @@ footer p {
   opacity: 0;
 } */
 
+.single-work .show
+{
+  animation: gen_anim 1s 400ms ease-in-out forwards;
+  opacity: 0;
+}
 @keyframes gen_anim{
   from {
     transform: translateX(-100px);
