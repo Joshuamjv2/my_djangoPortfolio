@@ -477,7 +477,7 @@ footer p {
   }
 
   .show{
-    animation: gen_anim-up 300ms 0ms ease-in forwards;
+    animation: gen_anim-up 1s 0ms ease-in forwards;
   }
 
   @keyframes gen_anim-up{
@@ -490,6 +490,10 @@ footer p {
       transform: translateY(0);
       opacity: 1;
     }
+  }
+
+  .show.about-img{
+    animation-delay: 100ms;
   }
 
   .nav_item + .nav_item{
@@ -517,7 +521,7 @@ footer p {
 @media (min-width: 900px) {
   
   .show{
-    animation: gen_anim 300ms 0ms ease-in forwards;
+    animation: gen_anim 1s 0ms ease-in forwards;
   }
   
   @keyframes gen_anim{
