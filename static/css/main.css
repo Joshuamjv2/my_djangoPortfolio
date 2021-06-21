@@ -476,16 +476,8 @@ footer p {
     }
   }
 
-  @keyframes gen_anim{
-    from {
-      transform: translateY(100px);
-      opacity: 0;
-    }
-
-    to{
-      transform: translateY(0);
-      opacity: 1;
-    }
+  .show{
+    animation: gen_anim-up 1s 400ms ease-in-out forwards;
   }
 
   .nav_item + .nav_item{
@@ -835,6 +827,18 @@ footer p {
 
   to{
     transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes gen_anim-up{
+  from {
+    transform: translateY(100px);
+    opacity: 0;
+  }
+
+  to{
+    transform: translateY(0);
     opacity: 1;
   }
 }
