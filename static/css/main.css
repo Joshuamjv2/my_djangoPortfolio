@@ -459,7 +459,7 @@ footer p {
     color: #E04031;
     font-size: 1.8rem;
     font-weight:600;
-    animation: nav-show 500ms ease-in-out 200ms forwards;
+    animation: nav-show 500ms ease-out 200ms forwards;
   }
 
   @keyframes nav-show {
