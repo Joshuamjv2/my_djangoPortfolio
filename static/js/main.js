@@ -24,7 +24,9 @@ function activate(e){
 const general_observer = new IntersectionObserver((entries, general_observer)=>{
     entries.forEach(entry =>{
         if (entry.isIntersecting){
-            entry.target.style.animation = `gen_anim 1s ${entry.target.dataset.delay}  ease-in-out forwards`
+            // console.log(entry)
+            // entry.target.style.animation = `gen_anim 1s ${entry.target.dataset.delay}  ease-in-out forwards`
+            entry.classList.add('show');
         }
     })
 }, options)

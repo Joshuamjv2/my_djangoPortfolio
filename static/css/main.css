@@ -814,9 +814,9 @@ footer p {
 
 /* Rest of sections */
 /* each work */
-.anim {
+/* .anim {
   opacity: 0;
-}
+} */
 
 @keyframes gen_anim{
   from {
