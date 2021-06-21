@@ -26,7 +26,7 @@ const general_observer = new IntersectionObserver((entries, general_observer)=>{
         if (entry.isIntersecting){
             // console.log(entry)
             // entry.target.style.animation = `gen_anim 1s ${entry.target.dataset.delay}  ease-in-out forwards`
-            entry.classList.add('show');
+            entry.target.classList.add('show');
         }
     })
 }, options)
