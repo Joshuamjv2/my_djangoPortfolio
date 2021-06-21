@@ -480,6 +480,18 @@ footer p {
     animation: gen_anim-up 1s 400ms ease-in-out forwards;
   }
 
+  @keyframes gen_anim-up{
+    from {
+      transform: translateY(100px);
+      opacity: 0;
+    }
+  
+    to{
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }
+
   .nav_item + .nav_item{
     border-top: unset;
   }
@@ -816,7 +828,6 @@ footer p {
 
 .show{
   animation: gen_anim 1s 400ms ease-in-out forwards;
-  /* opacity: 0; */
 }
 
 @keyframes gen_anim{
@@ -827,18 +838,6 @@ footer p {
 
   to{
     transform: translateX(0);
-    opacity: 1;
-  }
-}
-
-@keyframes gen_anim-up{
-  from {
-    transform: translateY(100px);
-    opacity: 0;
-  }
-
-  to{
-    transform: translateY(0);
     opacity: 1;
   }
 }
