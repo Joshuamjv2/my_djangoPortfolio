@@ -28,7 +28,7 @@ body {
 }
 
 i{
-  color: blue;
+  color: #E04031;
 }
 
 a {
@@ -45,7 +45,7 @@ img {
 
 .btn{
   color: var(--white);
-  background-color: blue;
+  background-color: #E04031;
   padding: .5rem .7rem;
 }
 
@@ -85,7 +85,7 @@ header {
 
 .nav_items li{
   padding: 1rem 1.2rem;
-  background-color:blue;
+  background-color:#E04031;
   color: #fff;
 }
 
@@ -112,7 +112,7 @@ header {
   content: "";
   height: 3px;
   width: 1.5rem;
-  background: blue;
+  background: #E04031;
 }
 
 .hambuger-main.open .hambuger{
@@ -201,7 +201,7 @@ header {
   width: 100%;
   bottom: 0;
   left: 0;
-  background-color: blue;
+  background-color: #E04031;
   position: absolute;
 }
 /* hero starts */
@@ -218,7 +218,7 @@ header {
   padding-bottom: 2rem;
   font-size: 2rem;
   font-weight: 700;
-  color:blue;
+  color:#E04031;
 }
 
 .cta{
@@ -280,7 +280,7 @@ header {
 .work-title {
   margin-top: 0.5rem;
   font-size: 1.5rem;
-  color: blue;
+  color: #E04031;
 }
 
 .work-detail {
@@ -406,7 +406,7 @@ textarea {
 /* form errors */
 .errorlist li{
   font-family: 'Poppins',sans-serif;
-  color: blue;
+  color: #E04031;
 }
 
 /* footer */
@@ -444,7 +444,7 @@ footer p {
     display: flex;
     justify-content: center;
     align-items: center;
-    color: blue;
+    color: #E04031;
     gap: 1.5rem;
   }
 
@@ -456,7 +456,7 @@ footer p {
   .active .nav_item{
     opacity: 0;
     background-color: unset;
-    color: blue;
+    color: #E04031;
     font-size: 1.8rem;
     font-weight:600;
     animation: nav-show 500ms ease-in-out 200ms forwards;
@@ -476,17 +476,17 @@ footer p {
     }
   }
 
-  /* @keyframes gen_anim{
+  @keyframes gen_anim{
     from {
       transform: translateY(100px);
       opacity: 0;
     }
-  
+
     to{
       transform: translateY(0);
       opacity: 1;
     }
-  } */
+  }
   
   .nav_item + .nav_item{
     border-top: unset;
@@ -494,7 +494,7 @@ footer p {
 
   /* hambuger color */
   .hambuger-main.open .hambuger::after, .hambuger-main.open .hambuger::before{
-    background:blue;
+    background:#E04031;
   }
 }
 
@@ -550,7 +550,7 @@ footer p {
 
     .hambuger-main{
       padding: 1rem .5rem;
-      background-color:blue;
+      background-color:#E04031;
     }
 
     .nav_items{
@@ -820,12 +820,12 @@ footer p {
 
 @keyframes gen_anim{
   from {
-    transform: translateY(100px);
+    transform: translateX(-100px);
     opacity: 0;
   }
 
   to{
-    transform: translateY(0);
+    transform: translateX(0);
     opacity: 1;
   }
 }
