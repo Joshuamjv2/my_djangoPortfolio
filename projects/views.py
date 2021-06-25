@@ -13,7 +13,9 @@ from django.core.mail import send_mail, get_connection
 
 def home(request):
     projects = Project.objects.filter(featured=True).order_by('-date_created')[:3]
-    submitted = False
+    # submitted = False
+    a = [project.git_repo for project in projects]
+    b = [project.live_site for project in projects]
     return render(request, 'home/index.html', {'projects':projects, 'title':'Home'})
 
 

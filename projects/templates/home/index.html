@@ -20,13 +20,13 @@
 
     <section class="work" id="work-section">
         <div class="container">
-            <h1 class="section-title special-bits" data-delay="0s">My Work</h1>
+            <h2 class="section-title special-bits" data-delay="0s">My Work</h2>
             <div class="all-work">
                 {% for project in projects %}
                     <div class="single-work anim" data-delay="0s">
                         <div class="work-image">
                             {% if project.image %}
-                                <img src="{{project.image.url}}" alt="">
+                                <img src="{{project.image.url}}" alt="{{project.title}}">
                                 {% else %}
                                 <img src="{% static 'images/phone.jpg'%}" alt="">
                             {% endif %}
@@ -42,31 +42,33 @@
                                     {% endfor %}
                                 </ul>
                                 <p class="work-detail">
-                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt soluta exercitationem velit quod, atque nemo corrupti facere quis repudiandae rem rerum ipsam eum.
+                                    
+                                    {% if project.project_detail %}
+                                        {{project.project_detail}}
+                                        {% else %}
+                                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt soluta exercitationem velit quod, atque nemo corrupti facere quis repudiandae rem rerum ipsam eum.
+                                    {% endif %}
+                                        
                                 </p>
-                            <ul class="work-cta">
-                                
-                                {% if project.git_repo %}
-                                <a href="https://github.com/">
+                                <ul class="work-cta">
+                            
+                                    {% if project.git_repo %}
                                     <li class="github">
-                                        <span><i class="fa fa-github cta" aria-hidden="true">
-                                    </i></span>source</li>
-                                </a>
-                                {% else %}
-                                <div></div>
-                                {% endif %}
+                                        <a href="{{project.git_repo}}" target="blank"><span><i class="fa fa-github cta" aria-hidden="true">
+                                        </i></span>source</a>
+                                    </li>
+                                    {% else %}<div></div>
+                                    {% endif %}
                                     
-                                
-                                {% if project.live_site %}
-                                <a href="https://twitter.com/Muwangu12386789">
-                                    <li class="live-site"><span><i class="cta fa fa-eye" aria-hidden="true"></i></span>live</li>
-                                </a>
-                                {% else %}
-                                <div></div>
-                                {% endif %}
+                                    {% if project.live_site %}
+                                    <li class="live-site">
+                                        <a href="{{project.live_site}}" target="blank"><span><i class="cta fa fa-eye" aria-hidden="true"></i></span>live</a>
+                                    </li>
+                                    {% else %}<div></div>
+                                    {% endif %}
+                                        
                                     
-                                
-                            </ul>
+                                </ul>
                         </div>
                         <!-- </div> -->
                     </div>
@@ -88,13 +90,13 @@
     <section class="about" id="about-section">
         <div class="container">
             <!-- <div class="about-text"> -->
-                <h3 class="section-title special-bits" data-delay="0s">About Me</h3>
+                <h2 class="section-title special-bits" data-delay="0s">About Me</h2>
                 <div class="about-content">
                     <p class="anim" data-delay='0s'>I am always in awe of the possibilities and strides the world has reached with the help of technology.
                     Every day for me is an inspiring opportunity to learn and position myself better to be part and parcel of this revolution.<span class="big-dev"><br>When I am not busy coding and debugging, I am busy thinking about random things and listening to any good music. I also love watching football and telling myself, "I will be a damn good photographer one day."</span>
                     </p>
                     <!-- </div> -->
-                    <div class="about-img anim" data-delay="100ms"><img src="{% static 'images/website.jpg'%}" alt="Image of Joshua" width=""></div>
+                    <div class="about-img anim" data-delay="100ms"><img src="{% static 'images/website.jpg'%}" alt="MuwanguziJoshua" width=""></div>
                     <p class="small-dev anim" data-delay="0s">When I am not busy coding and debugging, I am busy thinking about random things and listening to any good music. I also love watching football and telling myself, "I will be a damn good photographer one day."</p>
                 </div>
                 <!-- <p class="resume special">See my resume</p> -->
