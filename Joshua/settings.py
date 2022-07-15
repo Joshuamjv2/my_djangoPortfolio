@@ -30,7 +30,7 @@ SECRET_KEY = os.environ['SECRET_KEY']
 DEBUG = bool(strtobool(os.environ.get('DEBUG', 'True')))
 
 ALLOWED_HOSTS = os.environ['ALLOWED_HOSTS'].split(' ') 
-
+# ALLOWED_HOSTS = []
 
 # Application definition
 

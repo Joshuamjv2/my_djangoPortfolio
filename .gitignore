@@ -2,3 +2,5 @@ __pycahche__/
 *.os
 .env
 *.log
+.history/
+pelrio_root.txt
